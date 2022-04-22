@@ -1,3 +1,4 @@
+import os
 import random
 import string
 
@@ -15,6 +16,21 @@ def pick_word(lib):
     word = random.choice(lib).lower()
 
     return word
+
+
+def clear_log(lines=80):
+    """
+    Clears the console screen.
+    """
+    if os.name == 'posix':
+        # Linux/MacOS/etc
+        os.system('clear')
+    elif os.name in ('nt', 'dos', 'ce'):
+        # DOS/Windows
+        os.system('CLS')
+    else:
+        # Fallback for unknown OS
+        print('\n' * lines)
 
 
 def game():
@@ -37,17 +53,24 @@ def game():
             attempts.add(user_choice)
             if user_choice in letters:
                 letters.remove(user_choice)
+                clear_log()
+                print(f'{user_choice} is a correct letter!\n')
             else:
                 lives_left -= 1
-                print('Letter is not in the word.\n')
+                clear_log()
+                print(f'{user_choice} is not part of the word.\n')
         elif user_choice in attempts:
-            print('This letter has been used, Please try again!\n')
+            clear_log()
+            print(f'{user_choice} has been used, Please try again!\n')
         else:
+            clear_log()
             print('Invalid character, Please try again!\n')
 
     if lives_left == 0:
+        clear_log()
         print(f'You have runout of lives! The word was {game_word}.')
     else:
+        clear_log()
         print(f'Well done you managed to guess the word {game_word}!')
 
 
