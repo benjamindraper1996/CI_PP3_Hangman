@@ -29,7 +29,7 @@ def game():
 
     while len(letters) > 0:
         print(f'Lives remaining: {lives_left}')
-        print(f'These are the letters you have used: '.join(attempts))
+        print(f'These are the letters you have used:', ' '.join(attempts))
         guess = [letter if letter in attempts else '_' for letter in game_word]
         print(' '.join(guess))
         user_choice = input('Try and guess a letter:\n').lower()
