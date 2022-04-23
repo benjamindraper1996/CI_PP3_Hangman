@@ -79,7 +79,7 @@ def restart_game():
     Reloads the game when it has been won or lost.
     """
     while True:
-        end_game = input('Would you like to play again? y/n\n').lower
+        end_game = input('Would you like to play again? y/n\n').lower()
         if end_game == 'y':
             clear_log()
             game()
