@@ -74,12 +74,30 @@ def game():
         print(f'Well done you managed to guess the word {game_word}!')
 
 
+def restart_game():
+    """
+    Reloads the game when it has been won or lost.
+    """
+    while True:
+        end_game = input('Would you like to play again? y/n\n').lower
+        if end_game == 'y':
+            clear_log()
+            game()
+        elif end_game == 'n':
+            clear_log()
+            print('Thank you for playing Hangman!')
+        else:
+            clear_log()
+            print('Invalid character, Please try again!\n')
+
+
 def main():
     """
     Run all game functions.
     """
     pick_word(LIBRARY)
     game()
+    restart_game()
 
 
 main()
