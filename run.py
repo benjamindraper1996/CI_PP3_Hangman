@@ -8,6 +8,118 @@ LIBRARY = ["computer", "approach", "daughter", "positive", "dedicate",
            "definite", "hardware", "terminal", "finished", "absolute",
            "scenario", "argument", "category", "variable", "function"]
 
+gallows_dict = {
+    0: """
+        ___________
+        |  /      |
+        | /       |
+        |/       ( )
+        |        /|\\
+        |         |
+        |        / \\
+        |___________
+    """,
+    1: """
+        ___________
+        |  /      |
+        | /       |
+        |/       ( )
+        |         |\\
+        |         |
+        |        / \\
+        |___________
+    """,
+    2: """
+        ___________
+        |  /      |
+        | /       |
+        |/       ( )
+        |         |
+        |         |
+        |        / \\
+        |___________
+    """,
+    3: """
+        ___________
+        |  /      |
+        | /       |
+        |/       ( )
+        |         |
+        |         |
+        |        /
+        |___________
+    """,
+    4: """
+        ___________
+        |  /      |
+        | /       |
+        |/       ( )
+        |         |
+        |         |
+        |
+        |___________
+    """,
+    5: """
+        ___________
+        |  /      |
+        | /       |
+        |/       ( )
+        |
+        |
+        |
+        |___________
+    """,
+    6: """
+        ___________
+        |  /      |
+        | /       |
+        |/
+        |
+        |
+        |
+        |___________
+    """,
+    7: """
+        ___________
+        |  /
+        | /
+        |/
+        |
+        |
+        |
+        |___________
+    """,
+    8: """
+        ___________
+        |
+        |
+        |
+        |
+        |
+        |
+        |___________
+    """,
+    9: """
+
+        |
+        |
+        |
+        |
+        |
+        |
+        |___________
+    """,
+    10: """
+
+
+
+
+
+
+
+        ____________
+    """}
+
 
 def pick_word(lib):
     """
@@ -59,12 +171,13 @@ def game():
     letters = set(game_word)
     alphabet = set(string.ascii_lowercase)
     attempts = set()
-    lives_left = 11
+    lives_left = 10
 
     while len(letters) > 0 and lives_left > 0:
         print(f'Lives remaining: {lives_left}')
         print('These are the letters you have used:', ' '.join(attempts))
         guess = [letter if letter in attempts else '_' for letter in game_word]
+        print(gallows_dict[lives_left])
         print(' '.join(guess))
         user_choice = input('Try and guess a letter:\n').lower()
         if user_choice in alphabet - attempts:
