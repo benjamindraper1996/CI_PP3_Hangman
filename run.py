@@ -173,9 +173,11 @@ def game():
     attempts = set()
     lives_left = 10
 
+    title()
+
     while len(letters) > 0 and lives_left > 0:
         print(f'Lives remaining: {lives_left}')
-        print('These are the letters you have used:', ' '.join(attempts))
+        print('These are the letters you have used: ', ' '.join(attempts))
         guess = [letter if letter in attempts else '_' for letter in game_word]
         print(gallows_dict[lives_left])
         print(' '.join(guess))
@@ -185,25 +187,31 @@ def game():
             if user_choice in letters:
                 letters.remove(user_choice)
                 clear_log()
+                title()
                 print(f'{user_choice} is a correct letter!\n')
             else:
                 lives_left -= 1
                 clear_log()
+                title()
                 print(f'{user_choice} is not part of the word.\n')
         elif user_choice in attempts:
             clear_log()
+            title()
             print(f'{user_choice} has been used, Please try again!\n')
         else:
             clear_log()
+            title()
             print('Invalid character, Please try again!\n')
 
     if lives_left == 0:
         clear_log()
+        title()
         print(gallows_dict[lives_left])
         print(f'You have runout of lives! The word was {game_word}.')
         restart_game()
     else:
         clear_log()
+        title()
         print(f'Well done you managed to guess the word {game_word}!')
         restart_game()
 
@@ -232,8 +240,9 @@ def welcome_message():
         'To play the game enter a letter to guess,\n'
         'if it is in the word the letter will reveal itself.\n'
         'If it is not in the word you will lose a life!\n')
-    start_game = input('Press "s" to start the game.').lower()
+    start_game = input('Press "s" to start the game.\n').lower()
     if start_game == 's':
+        clear_log()
         game()
     else:
         print('Invalid character, Please try again!\n')
