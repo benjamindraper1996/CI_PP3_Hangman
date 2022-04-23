@@ -1,3 +1,6 @@
+"""
+Hangman game file.
+"""
 import os
 import random
 import string
@@ -154,7 +157,7 @@ def restart_game():
         end_game = input('Would you like to play again? y/n\n').lower()
         if end_game == 'y':
             clear_log()
-            welcome_message()
+            game()
         elif end_game == 'n':
             clear_log()
             welcome_message()
