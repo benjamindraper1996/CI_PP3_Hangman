@@ -21,6 +21,7 @@ def pick_word(lib):
 def clear_log(lines=80):
     """
     Clears the console screen.
+    lines variable used as teh fallback option when the OS is unknown.
     """
     if os.name == 'posix':
         # Linux/MacOS/etc
@@ -35,7 +36,7 @@ def clear_log(lines=80):
 
 def game():
     """
-    Gather user input and check against the 'word' variable.
+    Gather user input and check against the 'game_word' variable.
     """
     game_word = pick_word(LIBRARY)
     letters = set(game_word)
@@ -91,11 +92,36 @@ def restart_game():
             print('Invalid character, Please try again!\n')
 
 
+def title():
+    """
+    Creates a Header for the game.
+    """
+    print("""
+    #     #       #       #     #    ###      #       #       #       #     #
+    #     #      # #      ##    #  ##   ##    ##     ##      # #      ##    #
+    #     #     #   #     # #   # #           # #   # #     #   #     # #   #
+    #######    #######    #  #  # #     ##### #  # #  #    #######    #  #  #
+    #     #   #       #   #   # # #       #   #   #   #   #       #   #   # #
+    #     #  #         #  #    ##  ##   ##    #       #  #         #  #    ##
+    #     # #           # #     #    ###      #       # #           # #     #
+    """)
+
+
+def welcome_message():
+    title()
+    print(
+        'To play the game enter a letter to guess,\n'
+        'if it is in the word the letter will reveal itself.\n'
+        'If it is not in the word you will lose a life!\n'
+        'Press Enter to play the game!')
+
+
 def main():
     """
     Run all game functions.
     """
     pick_word(LIBRARY)
+    welcome_message()
     game()
     restart_game()
 
