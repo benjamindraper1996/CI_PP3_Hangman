@@ -199,6 +199,7 @@ def game():
 
     if lives_left == 0:
         clear_log()
+        print(gallows_dict[lives_left])
         print(f'You have runout of lives! The word was {game_word}.')
         restart_game()
     else:
