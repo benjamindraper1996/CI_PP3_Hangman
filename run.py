@@ -34,6 +34,23 @@ def clear_log(lines=80):
         print('\n' * lines)
 
 
+def restart_game():
+    """
+    Reloads the game when it has been won or lost.
+    """
+    while True:
+        end_game = input('Would you like to play again? y/n\n').lower()
+        if end_game == 'y':
+            clear_log()
+            game()
+        elif end_game == 'n':
+            clear_log()
+            welcome_message()
+        else:
+            clear_log()
+            print('Invalid character, Please try again!\n')
+
+
 def game():
     """
     Gather user input and check against the 'game_word' variable.
@@ -44,9 +61,9 @@ def game():
     attempts = set()
     lives_left = 11
 
-    while len(letters) > 0:
+    while len(letters) > 0 and lives_left > 0:
         print(f'Lives remaining: {lives_left}')
-        print(f'These are the letters you have used:', ' '.join(attempts))
+        print('These are the letters you have used:', ' '.join(attempts))
         guess = [letter if letter in attempts else '_' for letter in game_word]
         print(' '.join(guess))
         user_choice = input('Try and guess a letter:\n').lower()
@@ -70,26 +87,10 @@ def game():
     if lives_left == 0:
         clear_log()
         print(f'You have runout of lives! The word was {game_word}.')
+        restart_game()
     else:
         clear_log()
         print(f'Well done you managed to guess the word {game_word}!')
-
-
-def restart_game():
-    """
-    Reloads the game when it has been won or lost.
-    """
-    while True:
-        end_game = input('Would you like to play again? y/n\n').lower()
-        if end_game == 'y':
-            clear_log()
-            game()
-        elif end_game == 'n':
-            clear_log()
-            print('Thank you for playing Hangman!')
-        else:
-            clear_log()
-            print('Invalid character, Please try again!\n')
 
 
 def title():
@@ -108,12 +109,19 @@ def title():
 
 
 def welcome_message():
+    """
+    Prints a title and a message explainging how to play the game.
+    """
     title()
     print(
         'To play the game enter a letter to guess,\n'
         'if it is in the word the letter will reveal itself.\n'
-        'If it is not in the word you will lose a life!\n'
-        'Press Enter to play the game!')
+        'If it is not in the word you will lose a life!\n')
+    start_game = input('Press "s" to start the game.').lower()
+    if start_game == 's':
+        game()
+    else:
+        print('Invalid character, Please try again!\n')
 
 
 def main():
