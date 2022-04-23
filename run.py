@@ -42,7 +42,7 @@ def restart_game():
         end_game = input('Would you like to play again? y/n\n').lower()
         if end_game == 'y':
             clear_log()
-            game()
+            welcome_message()
         elif end_game == 'n':
             clear_log()
             welcome_message()
@@ -91,6 +91,7 @@ def game():
     else:
         clear_log()
         print(f'Well done you managed to guess the word {game_word}!')
+        restart_game()
 
 
 def title():
