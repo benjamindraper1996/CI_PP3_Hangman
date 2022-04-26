@@ -4,6 +4,7 @@ Checks the username and email of the player from the spreadsheet database.
 import gspread
 from google.oauth2.service_account import Credentials
 from email_validator import validate_email, EmailNotValidError
+from run import welcome_message
 
 # Scope vars as defined in code institute Love_Sandwiches walk-through.
 SCOPE = [
@@ -25,42 +26,51 @@ def login():
     """
     Logs existing players in and creates new accoutns.
     """
-
-    global PLAYER_EMAIL
-    global PLAYER_NAME
-    global PLAYER_SCORE
+    global player_name
+    global player_score
+    global player_row
 
     try:
         while True:
-            email = valid_email(input('Enter your email address: \n'))
+            email = get_email()
             existing_user = check_registered(email)
 
             if existing_user:
-                PLAYER_EMAIL = WORKSHEET.find(PLAYER_EMAIL).row
-                PLAYER_NAME = \
-                    WORKSHEET.find(PLAYER_NAME)[1]
-                PLAYER_SCORE = \
-                    WORKSHEET.find(PLAYER_SCORE)[2]
+                player_row = WORKSHEET.find(email).row
+                player_name = WORKSHEET.row_values(player_row)[1]
+                player_score = WORKSHEET.row_values(player_row)[2]
+                print(f'Hello again {player_name}.\n')
+                print(f'Your score is {player_score}.\n')
             else:
-                print('Email not found please enter email again: \n')
-                new_player_email = input('Please enter your email: \n')
                 new_player_name = input('Please enter your name: \n')
-                player_data = [new_player_email, new_player_name, 0]
+                player_data = [email, new_player_name, 0]
                 WORKSHEET.append_row(player_data)
                 break
     except TypeError:
         return None
 
 
-def valid_email(email_address):
+def get_email():
     """
-    Validates the email given to the form name@emample.com.
+    Gets the users email address.
     """
+    while True:
+        email = input('Please enter your email address to continue: \n')
+        if valid_email(email):
+            break
+    return email
+
+
+def valid_email(email):
+    """
+    Validates the email given to the format name@emample.com.
+    """
+    print('Validating email address...')
     try:
-        validate_email(email_address)
+        validate_email(email)
         return True
     except EmailNotValidError as err:
-        print(str(err) + 'Email address not valid please try again!\n')
+        print(str(err), 'Email address not valid please try again!\n')
 
 
 def check_registered(email):
