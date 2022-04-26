@@ -4,7 +4,7 @@ Hangman game file.
 import os
 import random
 import string
-from validation import login
+import validation as val
 
 # List of words for use inside the game.
 LIBRARY = ["computer", "approach", "daughter", "positive", "dedicate",
@@ -244,14 +244,7 @@ def welcome_message():
         'To play the game enter a letter to guess,\n'
         'If it is in the word the letter will reveal itself.\n'
         'If it is not in the word you will lose a life!\n')
-    login()
-
-    # start_game = input('Press "s" to start the game.\n').lower()
-    # if start_game == 's':
-    #    clear_log()
-    #    game()
-    # else:
-    #    print('Invalid character, Please try again!\n')
+    val.login()
 
 
 def main():
@@ -264,5 +257,5 @@ def main():
     restart_game()
 
 
-# main()
-welcome_message()
+if __name__ == "__main__":
+    main()

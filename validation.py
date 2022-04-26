@@ -4,7 +4,7 @@ Checks the username and email of the player from the spreadsheet database.
 import gspread
 from google.oauth2.service_account import Credentials
 from email_validator import validate_email, EmailNotValidError
-from run import welcome_message
+from run import game
 
 # Scope vars as defined in code institute Love_Sandwiches walk-through.
 SCOPE = [
@@ -26,9 +26,6 @@ def login():
     """
     Logs existing players in and creates new accoutns.
     """
-    global player_name
-    global player_score
-    global player_row
 
     try:
         while True:
@@ -41,11 +38,12 @@ def login():
                 player_score = WORKSHEET.row_values(player_row)[2]
                 print(f'Hello again {player_name}.\n')
                 print(f'Your score is {player_score}.\n')
+                game()
             else:
                 new_player_name = input('Please enter your name: \n')
                 player_data = [email, new_player_name, 0]
                 WORKSHEET.append_row(player_data)
-                break
+                game()
     except TypeError:
         return None
 
