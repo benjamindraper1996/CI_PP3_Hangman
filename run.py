@@ -4,6 +4,7 @@ Hangman game file.
 import os
 import random
 import string
+from validation import login
 
 # List of words for use inside the game.
 LIBRARY = ["computer", "approach", "daughter", "positive", "dedicate",
@@ -136,7 +137,7 @@ def pick_word(lib):
 def clear_log(lines=80):
     """
     Clears the console screen.
-    lines variable used as teh fallback option when the OS is unknown.
+    lines variable used as the fallback option when the OS is unknown.
     """
     if os.name == 'posix':
         # Linux/MacOS/etc
@@ -236,19 +237,21 @@ def title():
 
 def welcome_message():
     """
-    Prints a title and a message explainging how to play the game.
+    Prints a title and a message explaining how to play the game.
     """
     title()
     print(
         'To play the game enter a letter to guess,\n'
-        'if it is in the word the letter will reveal itself.\n'
+        'If it is in the word the letter will reveal itself.\n'
         'If it is not in the word you will lose a life!\n')
-    start_game = input('Press "s" to start the game.\n').lower()
-    if start_game == 's':
-        clear_log()
-        game()
-    else:
-        print('Invalid character, Please try again!\n')
+    login()
+
+    # start_game = input('Press "s" to start the game.\n').lower()
+    # if start_game == 's':
+    #    clear_log()
+    #    game()
+    # else:
+    #    print('Invalid character, Please try again!\n')
 
 
 def main():
@@ -261,4 +264,5 @@ def main():
     restart_game()
 
 
-main()
+# main()
+welcome_message()
