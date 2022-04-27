@@ -27,7 +27,7 @@ def login():
     Logs existing players in and creates new accoutns.
     """
 
-    global player
+    global player_score
     global player_row
 
     try:
@@ -38,8 +38,7 @@ def login():
             if existing_user:
                 player_row = WORKSHEET.find(email).row
                 player_name = WORKSHEET.row_values(player_row)[1]
-                player_score = WORKSHEET.row_values(player_row)[2]
-                player = [email, player_name, player_score]
+                player_score = int(WORKSHEET.row_values(player_row)[2])
                 print(f'Hello again {player_name}.\n')
                 print(f'Your score is {player_score}.\n')
                 game()
