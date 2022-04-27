@@ -217,9 +217,7 @@ def game():
         clear_log()
         title()
         val.player_score += 1
-        print('updated')
         val.WORKSHEET.update_cell(val.player_row, 3, val.player_score)
-        print('spreadsheet updated')
         print(f'Well done you managed to guess the word {game_word}!')
         restart_game()
 
