@@ -217,6 +217,8 @@ def game():
         clear_log()
         title()
         print(f'Well done you managed to guess the word {game_word}!')
+        val.player[2] += 1
+        val.WORKSHEET.update(val)
         restart_game()
 
 

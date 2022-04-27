@@ -27,6 +27,9 @@ def login():
     Logs existing players in and creates new accoutns.
     """
 
+    global player
+    global player_row
+
     try:
         while True:
             email = get_email()
@@ -36,13 +39,14 @@ def login():
                 player_row = WORKSHEET.find(email).row
                 player_name = WORKSHEET.row_values(player_row)[1]
                 player_score = WORKSHEET.row_values(player_row)[2]
+                player = [email, player_name, player_score]
                 print(f'Hello again {player_name}.\n')
                 print(f'Your score is {player_score}.\n')
                 game()
             else:
                 new_player_name = input('Please enter your name: \n')
-                player_data = [email, new_player_name, 0]
-                WORKSHEET.append_row(player_data)
+                player = [email, new_player_name, 0]
+                WORKSHEET.append_row(player)
                 game()
     except TypeError:
         return None
