@@ -48,3 +48,8 @@ This is a command-line version of the game Hangman, the objective of the game is
 
 [Back to Table Of Content](#table-of-content)
 
+## User Experience
+
+### Target Audience
+The Target audience for the game is not specific to any group of individuals, the game can be played by anyone who is looking for an entertaining way to pass some time. It would be best suited to people who are about the age of 10 years old due to the word selection used, younger people might find it quite difficult.
+
