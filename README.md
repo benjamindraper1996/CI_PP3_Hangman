@@ -59,3 +59,9 @@ The Target audience for the game is not specific to any group of individuals, th
 3.	The user can expect to see personalised user information when logging into their account and their access to their total score.
 4.	The user can except to see feedback on the game as it runs and the result.
 
+### User Manual
+The user is given a short description for how to play the game when you login to your account. Throughout the game you are given guidance to make the game user friendly. You are always shown what letters you have already used and how many lives you have left.
+When navigating through the menu’s you are given your options or asked to enter a specific input into the terminal to continue with the game.
+
+[Back to Table Of Content](#table-of-content)
+
