@@ -53,3 +53,9 @@ This is a command-line version of the game Hangman, the objective of the game is
 ### Target Audience
 The Target audience for the game is not specific to any group of individuals, the game can be played by anyone who is looking for an entertaining way to pass some time. It would be best suited to people who are about the age of 10 years old due to the word selection used, younger people might find it quite difficult.
 
+### User Requirements and Expectations
+1.	The user can expect an easy-to-use bug free game.
+2.	The user can expect to find straightforward navigation and guidance.
+3.	The user can expect to see personalised user information when logging into their account and their access to their total score.
+4.	The user can except to see feedback on the game as it runs and the result.
+
