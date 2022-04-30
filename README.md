@@ -34,3 +34,17 @@ This is a command-line version of the game Hangman, the objective of the game is
 10. [Deployment](#deployment)
 11. [Credits](#credits)
 12. [Acknowledgements](#acknowledgements)
+
+## Project Goals
+
+### User Goals
+1.	To have a fun and easy game to play.
+2.	To be able to how to play
+3.	To be able to create an account and track the score.
+### Site Owner Goals
+1.	Create a game that is intuitive to use.
+2.	Ensure the users understand the objective of the game.
+3.	Give the user feedback while they are playing the game.
+
+[Back to Table Of Content](#table-of-content)
+
