@@ -27,6 +27,8 @@ This is a command-line version of the game Hangman, the objective of the game is
     1. [Languages](#languages)
     2. [Frameworks and Tools](#frameworks-and-tools)
     3. [Libraries](#libraries)
+        - [Python Libraries](#python-libraries)
+        - [Third Party Libraries](#third-party-libraries)
 6. [Features](#features)
     1. [User Login](#user-login)
     2. [How To Play](#how-to-play)
@@ -240,3 +242,8 @@ This diagram shows the structure and flow of the game logic within the applicati
 
 [Back to Table Of Content](#table-of-content)
 
+## Testing
+
+The approach I decided to take to test this project was to manually test the user stories myself and get another individual to follow the same actions, using different credentials when logging in to test the game.
+
+After this I decided to use an automated testing library called unittest to test my validation file. This involves building tests to allow the game to step through and test the functions within the validation file that I have targeted.
