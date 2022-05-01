@@ -65,3 +65,15 @@ When navigating through the menu’s you are given your options or asked to ente
 
 [Back to Table Of Content](#table-of-content)
 
+## User Stories
+
+### Users
+1.	I want clear options to select in all the game menus.
+2.	I want to be able to read how to play the game.
+3.	I want to be able to log in to my account.
+4.	I want to be to log back into my account when I return to the game.
+5.	I want to receive feedback throughout the game.
+6.	I want to get feedback when I win the game.
+7.	I want to be able to play multiple games when I'm logged in.
+8.	I want to see how many games I've won so far.
+
