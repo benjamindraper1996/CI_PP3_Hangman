@@ -102,3 +102,12 @@ This diagram shows the structure and flow of the game logic within the applicati
 ### Languages
 - [Python](https://www.w3schools.com/python/default.asp) language for the structure, logic and decision making of the game.
 - [HTML](https://www.w3schools.com/html/default.asp) and [CSS]( https://www.w3schools.com/css/default.asp) used for the small edits made to the template files provided by Code Institute to customize the look of the terminal page.
+
+### Frameworks & Tools
+- [Diagrams.net](https://app.diagrams.net/) was used to create my flow diagram.
+- [GitHub](https://github.com/) is being used as my repository to store all of my code and manage version control.
+- [Google Cloud Platform](https://cloud.google.com/cloud-console/) was used to store and create the access credentials for the google sheet storing the user information.
+- [Google Sheets](https://www.google.co.uk/sheets/about/) is being used for storing player details.
+- [Heroku Platform](https://dashboard.heroku.com/) is used to deploy the project to a live environment.
+- [PEP8](http://pep8online.com/) has been used to verify all the code against python coding standards.
+
