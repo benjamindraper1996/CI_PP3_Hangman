@@ -2,7 +2,7 @@
 
 (Developer: Benjamin Draper)
 
-![Mock-up image](/documentation/screenshot.JPG)
+![Mock-up image](/documentation/screenshot.jpg)
 
  [Live webpage](https://ben-hangman.herokuapp.com/)
 
@@ -125,3 +125,26 @@ This diagram shows the structure and flow of the game logic within the applicati
 - [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) – this is a required part of the Google API to allow access to the game the authorization to access the spreadsheet, during development I used a creds.json file and in Heroku I have saved the contents of this file in the config vars section.
 
 [Back to Table Of Content](#table-of-content)
+
+## Features
+
+### User Login
+- Asks the player for their email address to login.
+- informs them if the email they input is not in the correct format.
+- Provides the ability for a user to login or create a new account from their email address.
+- Saves the player to a Google Spreadsheet to be recalled when needed.
+- Shows the user their score from previous games they have played.
+- User stories covered: 3, 4, 8, 11, 13
+<details>
+<summary>User Login Screenshot</summary>
+![User Login](documentation/features/user-login.jpg)
+</details>
+<details>
+<summary>Incorrect Login Screenshot</summary>
+![Incorrect Login](documentation/features/login-incorrect.jpg)
+</details>
+<details>
+<summary>Player Database Screenshot</summary>
+![Player Database](documentation/features/player-database.jpg)
+</details>
+
