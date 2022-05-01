@@ -161,3 +161,14 @@ This diagram shows the structure and flow of the game logic within the applicati
 
 ![How To Play](/documentation/features/user-login.jpg)
 </details>
+
+### Game Options
+- Gives the player clear instructions throughout the game to help them play the game.
+- User stories covered: 1, 5, 9, 10
+
+<details>
+<summary>Game Options Screenshot</summary>
+
+![Game Options](documentation/features/game.jpg)
+</details>
+
