@@ -16,16 +16,22 @@ This is a command-line version of the game Hangman, the objective of the game is
     2. [Site Owner Goals](#site-owner-goals)
 2. [User Experience](#user-experience)
     1. [Target Audience](#target-audience)
-    2.  [User Requirements and Expectations](#user-requrements-and-expectations)
+    2.  [User Requirements and Expectations](#user-requirements-and-expectations)
     3. [User Manual](#user-manual)
 3. [User Stories](#user-stories)
+    1. [Users](#users)
+    2. [Site Owner](#site-owner)
 4. [Design](#design)
     1. [Flow Diagram](#flow-diagram)
 5. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
-    2. [Frameworks & Tools](#frameworks-&-tools)
+    2. [Frameworks and Tools](#frameworks-and-tools)
     3. [Libraries](#libraries)
 6. [Features](#features)
+    1. [User Login](#user-login)
+    2. [How To Play](#how-to-play)
+    3. [Game Options](#game-options)
+    4. [Game](#game)
 7. [Validation](#validation)
 8. [Testing](#testing)
     1. [Manual Testing](#manual-testing)
@@ -103,7 +109,7 @@ This diagram shows the structure and flow of the game logic within the applicati
 - [Python](https://www.w3schools.com/python/default.asp) language for the structure, logic and decision making of the game.
 - [HTML](https://www.w3schools.com/html/default.asp) and [CSS]( https://www.w3schools.com/css/default.asp) used for the small edits made to the template files provided by Code Institute to customize the look of the terminal page.
 
-### Frameworks & Tools
+### Frameworks and Tools
 - [Diagrams.net](https://app.diagrams.net/) was used to create my flow diagram.
 - [GitHub](https://github.com/) is being used as my repository to store all of my code and manage version control.
 - [Google Cloud Platform](https://cloud.google.com/cloud-console/) was used to store and create the access credentials for the google sheet storing the user information.
@@ -171,4 +177,44 @@ This diagram shows the structure and flow of the game logic within the applicati
 
 ![Game Options](documentation/features/game.jpg)
 </details>
+
+### Game
+- Displays the title created for the game.
+- Displays the numbers of lives remaining for the player.
+- Displays the Letters that have already been used within this game.
+- Displays the status of the gallows and the man getting hung.
+- Displays the status of the word being guessed.
+- Displays a warning when an invalid character is entered.
+- Tells the player when the enter a letter that is not in the word.
+- Provides feedback when the game has been won.
+- Gives the option to play again and prints the users total score after the game is finished.
+- User stories covered: 1, 5, 6, 7, 8, 12, 13
+
+<details>
+<summary>Game Options Screenshot</summary>
+
+![Game](documentation/features/game.jpg)
+</details>
+<details>
+<summary>Invalid Character Screenshot</summary>
+
+![Invalid Character](documentation/features/invalid-character.jpg)
+</details>
+<details>
+<summary>Letter Not In Word Screenshot</summary>
+
+![Invalid Character](documentation/features/letter-not-in-word.jpg)
+</details>
+<details>
+<summary>Game Won Screenshot</summary>
+
+![Game Won](documentation/features/game-won.jpg)
+</details>
+<details>
+<summary>Next Game Screenshot</summary>
+
+![Next Game](documentation/features/next-game.jpg)
+</details>
+
+[Back to Table Of Content](#table-of-content)
 
