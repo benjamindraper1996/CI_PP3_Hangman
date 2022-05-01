@@ -85,3 +85,15 @@ When navigating through the menu’s you are given your options or asked to ente
 13. I want the user to receive feedback from the game when they enter an invalid answer.
 
 [Back to Table Of Content](#table-of-content)
+
+## Design
+
+### Flow Diagram
+This diagram shows the structure and flow of the game logic within the application.
+
+<details><summary>Flowdiagram</summary>
+<img src="documentation/game-flowdiagram.jpg">
+</details>
+
+[Back to Table Of Content](#table-of-content)
+
