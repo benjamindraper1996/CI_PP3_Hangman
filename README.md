@@ -137,14 +137,22 @@ This diagram shows the structure and flow of the game logic within the applicati
 - User stories covered: 3, 4, 8, 11, 13
 <details>
 <summary>User Login Screenshot</summary>
-![User Login](documentation/features/user-login.jpg)
+![User Login](/documentation/features/user-login.jpg)
 </details>
 <details>
 <summary>Incorrect Login Screenshot</summary>
-![Incorrect Login](documentation/features/login-incorrect.jpg)
+![Incorrect Login](/documentation/features/login-incorrect.jpg)
 </details>
 <details>
 <summary>Player Database Screenshot</summary>
-![Player Database](documentation/features/player-database.jpg)
+![Player Database](/documentation/features/player-database.jpg)
 </details>
 
+### How To Play
+- Explains to the user how to play the game and navigate through the menus.
+- Is displayed before the user must interact with any menu or the main game.
+- User stories covered: 1, 2, 9,10
+<details>
+<summary>How To Play Screenshot</summary>
+![How To Play](/documentation/features/user-login.jpg)
+</details>
