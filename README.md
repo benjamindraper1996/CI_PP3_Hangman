@@ -111,3 +111,9 @@ This diagram shows the structure and flow of the game logic within the applicati
 - [Heroku Platform](https://dashboard.heroku.com/) is used to deploy the project to a live environment.
 - [PEP8](http://pep8online.com/) has been used to verify all the code against python coding standards.
 
+### Libraries
+
+#### Python Libraries
+- os is used to allow me to clear the terminal for different types of operating systems.
+- random is used to randomize the word used within the game, I used a selection of predefined words that it can select randomly select from.
+- string is used to ensure that all the characters entered by the player weather they are uppercase, or lowercase are interpreted as a lowercase character to prevent errors.
