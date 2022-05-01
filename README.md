@@ -77,3 +77,11 @@ When navigating through the menu’s you are given your options or asked to ente
 7.	I want to be able to play multiple games when I'm logged in.
 8.	I want to see how many games I've won so far.
 
+### Site Owner
+9.	I want users to have a good experience when they are playing the game.
+10.	I want users to be able to easily select options from all menus throughout the game.
+11.	I want all emails, usernames, and scores to be saved in a Google spreadsheet.
+12.	I want the user to see feedback from the game when they enter the wrong letter in the game.
+13. I want the user to receive feedback from the game when they enter an invalid answer.
+
+[Back to Table Of Content](#table-of-content)
