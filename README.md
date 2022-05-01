@@ -125,10 +125,10 @@ This diagram shows the structure and flow of the game logic within the applicati
 - os is used to allow me to clear the terminal for different types of operating systems.
 - random is used to randomize the word used within the game, I used a selection of predefined words that it can select randomly select from.
 - string is used to ensure that all the characters entered by the player weather they are uppercase, or lowercase are interpreted as a lowercase character to prevent errors.
+- [unittest](https://docs.python.org/3/library/unittest.html) – used to carry out automated testing on the validation.py file
 
 #### Third Party Libraries
 - [email_validator](https://pypi.org/project/email-validator/) – I used this library to make sure the player had entered a valid email address when signing up for an account.
-- [unittest](https://docs.python.org/3/library/unittest.html) – used to carry out automated testing on the validation.py file
 - [gspread](https://docs.gspread.org/en/latest/) – I used gspread to allow access to and edit the data in my google spreadsheet storing the player information
 - [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) – this is a required part of the Google API to allow access to the game the authorization to access the spreadsheet, during development I used a creds.json file and in Heroku I have saved the contents of this file in the config vars section.
 
