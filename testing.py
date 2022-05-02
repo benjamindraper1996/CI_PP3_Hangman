@@ -25,4 +25,19 @@ class TestLogin(unittest.TestCase):
 
     def test_login(self):
         """Tests the login Function"""
-        self.assertTrue(val.login(), True)  # Requires User interaction
+        self.assertTrue(val.login(), True)  # Requires User interaction.
+
+
+class TestNewLogin(unittest.TestCase):
+    """
+    Validates the New Player Login function.
+    """
+
+    def test_new_login(self):
+        """Tests the login Function"""
+        self.assertTrue(val.login(), True)
+        # Requires User interaction new email.
+
+
+if __name__ == "__main__":
+    unittest.main()

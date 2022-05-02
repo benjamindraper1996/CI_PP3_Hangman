@@ -43,8 +43,8 @@ def login():
                 print(f'Your score is {player_score}.\n')
                 game()
             else:
-                new_player_name = input('Please enter your name: \n')
-                player = [email, new_player_name, 0]
+                new_name = input('Your a new player, enter email again: \n')
+                player = [email, new_name, 0]
                 WORKSHEET.append_row(player)
                 game()
     except TypeError:
