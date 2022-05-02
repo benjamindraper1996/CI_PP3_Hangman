@@ -28,6 +28,7 @@ def login():
     """
 
     global player_score
+    global email
     global player_row
 
     try:
