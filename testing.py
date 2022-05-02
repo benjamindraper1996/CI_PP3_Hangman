@@ -1,19 +1,28 @@
 """
 Automated Testing Module
 """
-
 import unittest
 import validation as val
 
 
-class TestValidEmail(unittest.TestCase):
+class TestEmail(unittest.TestCase):
     """
-    Validates the player email input.
+    Validates the email given by the player.
     """
     def test_valid_email(self):
         """Tests for a Valid Email"""
         self.assertTrue(val.valid_email('test@gmail.com'), True)
 
     def test_invalid_email(self):
-        """Tests for invalid email"""
-        self.assertTrue(val.valid_email('1234'), None)
+        """Tests for a Invalid Email"""
+        self.assertFalse(val.valid_email('1234'), None)
+
+
+class TestLogin(unittest.TestCase):
+    """
+    Validates the Player Login function.
+    """
+
+    def test_login(self):
+        """Tests the login Function"""
+        self.assertTrue(val.login(), True)  # Requires User interaction

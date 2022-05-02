@@ -24,7 +24,7 @@ WORKSHEET = SHEET.worksheet("Users")
 
 def login():
     """
-    Logs existing players in and creates new accoutns.
+    Logs existing players in and creates new accounts.
     """
 
     global player_score
