@@ -23,6 +23,11 @@ SHEET = GSPREAD_CLIENT.open('CI_PP3_Hangman')
 WORKSHEET = SHEET.worksheet("Users")
 
 
+def get_input(text):
+    """Fake player input"""
+    return input(text)
+
+
 class TestEmail(unittest.TestCase):
     """
     Validates the email given by the player.
@@ -50,8 +55,8 @@ class TestLogin(unittest.TestCase):
         """Tests the login function"""
         print('Testing player login')
         response = 'test@gmail.com'
-        fake_input = Mock(side_effect=response)
-        with patch(input, fake_input):
+        test_input = Mock(side_effect=response)
+        with patch('builtins.input', test_input):
             val.login()
         print('Test Complete')
 
@@ -64,12 +69,8 @@ class TestNewLogin(unittest.TestCase):
     def test_new_login(self):
         """Tests the login function to create a new player"""
         print('Testing new player login')
-        response = '1234@gmail.com'
-        fake_input = Mock(side_effect=response)
-        with patch(input, fake_input):
-            val.login()
-        player_row = WORKSHEET.find(response).row
-        WORKSHEET.delete_row(player_row)
+
+        self.assertFalse(val.login(), True)
         print('Test Complete')
 
 
