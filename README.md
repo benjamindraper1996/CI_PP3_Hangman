@@ -128,95 +128,15 @@ This diagram shows the structure and flow of the game logic within the applicati
 - [unittest](https://docs.python.org/3/library/unittest.html) – used to carry out automated testing on the validation.py file
 
 #### Third Party Libraries
-- [email_validator](https://pypi.org/project/email-validator/) – I used this library to make sure the player had entered a valid email address when signing up for an account.
-- [gspread](https://docs.gspread.org/en/latest/) – I used gspread to allow access to and edit the data in my google spreadsheet storing the player information
-- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) – this is a required part of the Google API to allow access to the game the authorization to access the spreadsheet, during development I used a creds.json file and in Heroku I have saved the contents of this file in the config vars section.
+- [email_validator](https://pypi.org/project/email-validator/) – JUSTIFICATION: I used this library to make sure the player had entered a valid email address when signing up for an account.
+- [gspread](https://docs.gspread.org/en/latest/) – JUSTIFICATION: I used gspread to allow access to and edit the data in my google spreadsheet storing the player information
+- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) – JUSTIFICATION: This is a required part of the Google API to allow access to the game the authorization to access the spreadsheet, during development I used a creds.json file and in Heroku I have saved the contents of this file in the config vars section.
 
 [Back to Table Of Content](#table-of-content)
 
 ## Features
 
-### User Login
-- Asks the player for their email address to login.
-- informs them if the email they input is not in the correct format.
-- Provides the ability for a user to login or create a new account from their email address.
-- Saves the player to a Google Spreadsheet to be recalled when needed.
-- Shows the user their score from previous games they have played.
-- User stories covered: 3, 4, 8, 11, 13
-<details>
-<summary>User Login Screenshot</summary>
 
-![User Login](/documentation/features/user-login.jpg)
-</details>
-<details>
-<summary>Incorrect Login Screenshot</summary>
-
-![Incorrect Login](/documentation/features/login-incorrect.jpg)
-
-</details>
-<details>
-<summary>Player Database Screenshot</summary>
-
-![Player Database](/documentation/features/player-database.jpg)
-</details>
-
-### How To Play
-- Explains to the user how to play the game and navigate through the menus.
-- Is displayed before the user must interact with any menu or the main game.
-- User stories covered: 1, 2, 9,10
-<details>
-<summary>How To Play Screenshot</summary>
-
-![How To Play](/documentation/features/user-login.jpg)
-</details>
-
-### Game Options
-- Gives the player clear instructions throughout the game to help them play the game.
-- User stories covered: 1, 5, 9, 10
-
-<details>
-<summary>Game Options Screenshot</summary>
-
-![Game Options](documentation/features/game.jpg)
-</details>
-
-### Game
-- Displays the title created for the game.
-- Displays the numbers of lives remaining for the player.
-- Displays the Letters that have already been used within this game.
-- Displays the status of the gallows and the man getting hung.
-- Displays the status of the word being guessed.
-- Displays a warning when an invalid character is entered.
-- Tells the player when the enter a letter that is not in the word.
-- Provides feedback when the game has been won.
-- Gives the option to play again and prints the users total score after the game is finished.
-- User stories covered: 1, 5, 6, 7, 8, 12, 13
-
-<details>
-<summary>Game Options Screenshot</summary>
-
-![Game](documentation/features/game.jpg)
-</details>
-<details>
-<summary>Invalid Character Screenshot</summary>
-
-![Invalid Character](documentation/features/invalid-character.jpg)
-</details>
-<details>
-<summary>Letter Not In Word Screenshot</summary>
-
-![Invalid Character](documentation/features/letter-not-in-word.jpg)
-</details>
-<details>
-<summary>Game Won Screenshot</summary>
-
-![Game Won](documentation/features/game-won.jpg)
-</details>
-<details>
-<summary>Next Game Screenshot</summary>
-
-![Next Game](documentation/features/next-game.jpg)
-</details>
 
 [Back to Table Of Content](#table-of-content)
 
