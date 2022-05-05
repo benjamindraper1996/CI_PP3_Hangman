@@ -355,3 +355,19 @@ This section follows the user story structure and will test each user story agai
 <img src="docs/testing/user-story-4-b.jpg">
 <img src="docs/testing/user-story-4-c.jpg">
 </details>
+
+5. I want to receive feedback throughout the game.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Game Options |At the prompt to start a new game the user chooses to start a new game or quit |The User either starts a new game or quits back to the welcome message | Works as expected |
+| Email Validation | On the welcome message screen the player can type in their email address to sign into their account |User signs into their account, the game verifies that the email is correct | Works as expected |
+| Input Validation | The user enters a incorrect character at a given prompt | The game identifies the character is invalid and asks the player to try again before continuing | Works as expected |
+| Game | The player enters a valid character into the game | The game either reveals the letter within the word or the player loses a life | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-5-a.jpg">
+<img src="docs/testing/user-story-5-b.jpg">
+<img src="docs/testing/user-story-5-c.jpg">
+<img src="docs/testing/user-story-5-d.jpg">
+</details>
