@@ -136,6 +136,17 @@ This diagram shows the structure and flow of the game logic within the applicati
 
 ## Features
 
+### User Login
+- Asks the player for their email address to login.
+- informs them if the email they input is not in the correct format.
+- Shows the user their score from previous games they have played.
+- User stories covered: 3, 4, 8, 13
+
+<details>
+<summary>User Login Screenshot</summary>
+![User Login](documentation/features/user-login.jpg)
+</details>
+
 
 
 [Back to Table Of Content](#table-of-content)
