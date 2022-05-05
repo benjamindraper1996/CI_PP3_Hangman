@@ -7,10 +7,10 @@ import string
 import validation as val
 
 # List of words for use inside the game.
-LIBRARY = ["computer", "approach", "daughter", "positive", "dedicate",
-           "solution", "evaluate", "minimize", "delicate", "producer",
-           "definite", "hardware", "terminal", "finished", "absolute",
-           "scenario", "argument", "category", "variable", "function"]
+LIBRARY = ["computer", "approach", "daughter", "innocent", "dedicate",
+           "solution", "sentence", "magnetic", "delicate", "producer",
+           "definite", "complete", "terminal", "finished", "absolute",
+           "scenario", "argument", "champion", "nominate", "function"]
 
 gallows_dict = {
     0: """
@@ -162,7 +162,7 @@ def restart_game():
         elif end_game == 'n':
             clear_log()
             print('Thanks for playing! To restart, press the button above.')
-            exit()
+            SystemExit()
         else:
             clear_log()
             print('Invalid character, Please try again!\n')

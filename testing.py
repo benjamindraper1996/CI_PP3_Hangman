@@ -1,7 +1,6 @@
 """
 Automated Testing Module
 """
-import os
 import unittest
 from unittest import mock
 import validation as val
@@ -35,7 +34,7 @@ class TestLogin(unittest.TestCase):
         """Tests the login function"""
         print('Testing player login')
         with mock.patch(
-          'builtins.input', side_effect=iter(['test@gmail.com', ])):
+         'builtins.input', side_effect=iter(['test@gmail.com', ])):
             assert val.login() is run.title()
 
 
@@ -60,7 +59,7 @@ class TestNewLogin(unittest.TestCase):
 
 class TestDisplays(unittest.TestCase):
     """
-    Tests the title. clear_log functions
+    Tests the title, clear_log functions
     """
 
     def test_title(self):
@@ -85,9 +84,9 @@ class TestRestartGame(unittest.TestCase):
     def test_restart_game(self):
         """Tests restart_game function"""
         print('Testing restart_game')
-        with mock.patch(
-          'builtins.input', side_effect=iter(['x', 'n', 'y'])):
-            assert run.clear_log() is run.title()
+        text = ['x', 'y', 'n']
+        with mock.patch('builtins.input', side_effect=iter(text)):
+            assert run.restart_game() is run.title()
 
 
 if __name__ == "__main__":
