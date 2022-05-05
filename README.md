@@ -192,6 +192,18 @@ This diagram shows the structure and flow of the game logic within the applicati
 ![Game Options](documentation/features/game.jpg)
 </details>
 
+### Email Validation
+- Takes the user input email address validates against a template
+- Asks the user to re-enter the email address if it is incorrect
+- If it is valid it passes and allows the user to either log in or create a user
+- User stories covered: 1, 3, 5, 9, 13
+
+<details>
+<summary> Email Validation Screenshot</summary>
+
+![ Email Validation](documentation/features/email-validation.jpg)
+</details>
+
 
 [Back to Table Of Content](#table-of-content)
 
