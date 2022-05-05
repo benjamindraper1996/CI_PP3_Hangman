@@ -433,3 +433,25 @@ This section follows the user story structure and will test each user story agai
 <img src="docs/testing/user-story-10-b.jpg">
 <img src="docs/testing/user-story-10-c.jpg">
 </details>
+
+11. I want all emails, usernames, and scores to be saved in a Google spreadsheet.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| User Sign Up | On the welcome message screen the player can type in their email address and name to sign up for a new account |User signs up for a new account and user email, name and a blank score is store in the Google sheet | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-11-a.jpg">
+</details>
+
+12. I want the user to see feedback from the game when they enter the wrong letter in the game.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Input Validation | The user enters a incorrect character at a given prompt | The game identifies the character is invalid and asks the player to try again before continuing, preventing the user making an error | Works as expected |
+| Game | The user enters an already used character at a given prompt | The game identifies the character is valid and asks tells player the letter already used before asking to try again | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-12-a.jpg">
+<img src="docs/testing/user-story-12-b.jpg">
+</details>
