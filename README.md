@@ -227,6 +227,39 @@ This diagram shows the structure and flow of the game logic within the applicati
 ![ Input Validation](documentation/features/input-validation.jpg)
 </details>
 
+### Game
+- Displays the title created for the game.
+- Displays the numbers of lives remaining for the player.
+- Displays the Letters that have already been used within this game.
+- Displays the status of the gallows and the man getting hung.
+- Displays the status of the word being guessed.
+- Displays a warning when an invalid character is entered.
+- Tells the player when the enter a letter that is not in the word.
+- Provides feedback when the game has been won.
+- Gives the option to play again and prints the users total score after the game is finished.
+- User stories covered: 1, 5, 6, 7, 8, 12, 13
+
+<details>
+<summary>Game Screenshot</summary>
+
+![Game](documentation/features/game.jpg)
+</details>
+<details>
+<summary>Invalid Character Screenshot</summary>
+
+![Invalid Character](documentation/features/invalid-character.jpg)
+</details>
+<details>
+<summary>Game Won Screenshot</summary>
+
+![Game Won](documentation/features/game-won.jpg)
+</details>
+<details>
+<summary>Next Game Screenshot</summary>
+
+![Next Game](documentation/features/next-game.jpg)
+</details>
+
 
 [Back to Table Of Content](#table-of-content)
 
