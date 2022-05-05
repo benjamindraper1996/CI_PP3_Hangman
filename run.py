@@ -161,7 +161,8 @@ def restart_game():
             game()
         elif end_game == 'n':
             clear_log()
-            welcome_message()
+            print('Thanks for playing! To restart, press the button above.')
+            exit()
         else:
             clear_log()
             print('Invalid character, Please try again!\n')
