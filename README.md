@@ -341,3 +341,17 @@ This section follows the user story structure and will test each user story agai
 <img src="docs/testing/user-story-3-c.jpg">
 <img src="docs/testing/user-story-3-d.jpg">
 </details>
+
+4. I want to be to log back into my account when I return to the game.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| User Login | On the welcome message screen the player can type in their email address to sign into their account |User signs back into their account | Works as expected |
+| User Sign Up | On the welcome message screen the player can type in their email address and name to sign up for a new account |User signs up for a new account | Works as expected |
+| Welcome Message | On the welcome message screen the player can type in their email address to sign into their account |User signs back into their account | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-4-a.jpg">
+<img src="docs/testing/user-story-4-b.jpg">
+<img src="docs/testing/user-story-4-c.jpg">
+</details>
