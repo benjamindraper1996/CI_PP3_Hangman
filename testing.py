@@ -1,31 +1,11 @@
 """
 Automated Testing Module
 """
+import os
 import unittest
-from unittest.mock import Mock, patch
-import gspread
-from google.oauth2.service_account import Credentials
+from unittest import mock
 import validation as val
-
-# Scope vars as defined in code institute Love_Sandwiches walk-through.
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
-
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-
-# My database values.
-SHEET = GSPREAD_CLIENT.open('CI_PP3_Hangman')
-WORKSHEET = SHEET.worksheet("Users")
-
-
-# def get_input(text):
-#     """Fake player input"""
-#     return input(text)
+import run as run
 
 
 class TestEmail(unittest.TestCase):
@@ -46,32 +26,55 @@ class TestEmail(unittest.TestCase):
         print('Test Complete')
 
 
-# class TestLogin(unittest.TestCase):
-#     """
-#     Validates the Player Login function.
-#     """
+class TestLogin(unittest.TestCase):
+    """
+    Validates the Player Login function.
+    """
 
-#     def test_login(self):
-#         """Tests the login function"""
-#         print('Testing player login')
-#         response = 'test@gmail.com'
-#         test_input = Mock(side_effect=response)
-#         with patch('builtins.input', test_input):
-#             val.login()
-#         print('Test Complete')
+    def test_login(self):
+        """Tests the login function"""
+        print('Testing player login')
+        with mock.patch(
+          'builtins.input', side_effect=iter(['test@gmail.com', ])):
+            assert val.login() is run.title()
 
 
-# class TestNewLogin(unittest.TestCase):
-#     """
-#     Validates the New Player Login function.
-#     """
+class TestNewLogin(unittest.TestCase):
+    """
+    Validates the New Player Login function.
+    """
 
-#     def test_new_login(self):
-#         """Tests the login function to create a new player"""
-#         print('Testing new player login')
+    def test_new_login(self):
+        """Tests the login function to create a new player"""
+        print('Testing new player login')
+        with mock.patch(
+          'builtins.input', side_effect=iter(['1234@gmail.com', 'test', ])):
+            assert val.login() is run.title()
 
-#         self.assertFalse(val.login(), True)
-#         print('Test Complete')
+    def test_temp_login(self):
+        """deletes the email to be reused on the next run"""
+        test_email = '1234@gmail.com'
+        test_player = val.WORKSHEET.find(test_email).row
+        val.WORKSHEET.delete_rows(test_player)
+
+
+class TestDisplays(unittest.TestCase):
+    """
+    Tests the title. clear_log functions
+    """
+
+    def test_title(self):
+        """Tests the title function"""
+        print('Testing title print')
+        self.assertFalse(run.title(), True)
+        print('Test complete')
+
+    def test_clear_log(self):
+        """Tests clear_log function"""
+        print('Testing clear_log')
+        with mock.patch(
+          'builtins.input', side_effect=iter(['posix', 'dos', 'CLS'])):
+            self.assertIsNone(run.clear_log(), True)
 
 
 if __name__ == "__main__":

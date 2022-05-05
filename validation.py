@@ -65,7 +65,7 @@ def get_email():
 
 def valid_email(email):
     """
-    Validates the email given to the format name@emample.com.
+    Validates the email given to the format name@example.com.
     """
     print('Validating email address...')
     try:
