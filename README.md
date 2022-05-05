@@ -204,6 +204,17 @@ This diagram shows the structure and flow of the game logic within the applicati
 ![ Email Validation](documentation/features/email-validation.jpg)
 </details>
 
+### Welcome Message
+- This is a message that is displayed before the player has logged into their account
+- The message explains how to play the game and asks the player to login
+- User stories covered: 1, 2, 3, 4, 9
+
+<details>
+<summary> Welcome Message Screenshot</summary>
+
+![ Welcome Message](documentation/features/welcome-message.jpg)
+</details>
+
 
 [Back to Table Of Content](#table-of-content)
 
