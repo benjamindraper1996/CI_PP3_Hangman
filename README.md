@@ -455,3 +455,26 @@ This section follows the user story structure and will test each user story agai
 <img src="docs/testing/user-story-12-a.jpg">
 <img src="docs/testing/user-story-12-b.jpg">
 </details>
+
+13. I want the user to receive feedback from the game when they enter an invalid answer.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| User Sign Up | On the welcome message screen the player can type in their email address and name to sign up for a new account |User signs up for a new account | Works as expected |
+| Email Validation | On the welcome message screen the player can type in their email address to sign into their account |User signs into their account, the game verifies that the email is correct, to prevent errors signing back in later | Works as expected |
+| Input Validation | The user enters a incorrect character at a given prompt | The game identifies the character is invalid and asks the player to try again before continuing, preventing the user making an error | Works as expected |
+| Game | The user enters a valid character at a given prompt | The game identifies the character is valid and asks tells player the letter is not in the word before losing a life and asking to try again | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-13-a.jpg">
+<img src="docs/testing/user-story-13-b.jpg">
+<img src="docs/testing/user-story-13-c.jpg">
+<img src="docs/testing/user-story-13-d.jpg">
+</details>
+
+[Back to Table Of Content](#table-of-content)
+
+## Bugs
+
+[Back to Table Of Content](#table-of-content)
+
