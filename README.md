@@ -144,11 +144,13 @@ This diagram shows the structure and flow of the game logic within the applicati
 
 <details>
 <summary>User Login Screenshot</summary>
+
 ![User Login](documentation/features/user-login.jpg)
 </details>
 
 <details>
 <summary>Incorrect Login format Screenshot</summary>
+
 ![Incorrect Login](documentation/features/login-incorrect.jpg)
 </details>
 
@@ -159,11 +161,13 @@ This diagram shows the structure and flow of the game logic within the applicati
 
 <details>
 <summary> User Sign Up Screenshot</summary>
+
 ![User Sign Up](documentation/features/user-sign-up.jpg)
 </details>
 
 <details>
 <summary>Player Database Screenshot</summary>
+
 ![Player Database](documentation/features/player-database.jpg)
 </details>
 
@@ -174,9 +178,19 @@ This diagram shows the structure and flow of the game logic within the applicati
 
 <details>
 <summary>How To Play Screenshot</summary>
+
 ![How To Play](documentation/features/user-login.jpg)
 </details>
 
+### Game Options
+- Gives the player clear instructions throughout the game to help them play the game.
+- User stories covered: 1, 5, 9, 10
+
+<details>
+<summary>Game Options Screenshot</summary>
+
+![Game Options](documentation/features/game.jpg)
+</details>
 
 
 [Back to Table Of Content](#table-of-content)
