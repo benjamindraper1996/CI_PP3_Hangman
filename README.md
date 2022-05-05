@@ -325,3 +325,19 @@ This section follows the user story structure and will test each user story agai
 <img src="docs/testing/user-story-2-a.jpg">
 <img src="docs/testing/user-story-2-b.jpg">
 </details>
+
+3. I want to be able to log in to my account.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| User Login | On the welcome message screen the player can type in their email address to sign into their account |User signs into their account | Works as expected |
+| User Sign Up | On the welcome message screen the player can type in their email address and name to sign up for a new account |User signs up for a new account | Works as expected |
+| Email Validation | On the welcome message screen the player can type in their email address to sign into their account |User signs into their account, the game verifies that the email is correct | Works as expected |
+| Welcome Message | On the welcome message screen the player can type in their email address to sign into their account |User signs into their account | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-3-a.jpg">
+<img src="docs/testing/user-story-3-b.jpg">
+<img src="docs/testing/user-story-3-c.jpg">
+<img src="docs/testing/user-story-3-d.jpg">
+</details>
