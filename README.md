@@ -371,3 +371,13 @@ This section follows the user story structure and will test each user story agai
 <img src="docs/testing/user-story-5-c.jpg">
 <img src="docs/testing/user-story-5-d.jpg">
 </details>
+
+6. I want to get feedback when I win the game.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Game | The player enters the final character into the game | The game either reveals the word and tells the player they have won the game | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-6.jpg">
+</details>
