@@ -73,8 +73,21 @@ class TestDisplays(unittest.TestCase):
         """Tests clear_log function"""
         print('Testing clear_log')
         with mock.patch(
-          'builtins.input', side_effect=iter(['posix', 'dos', 'CLS'])):
+          'os.system', side_effect=iter(['posix', 'dos', 'err'])):
             self.assertIsNone(run.clear_log(), True)
+
+
+class TestRestartGame(unittest.TestCase):
+    """
+    Tests the restart_game function
+    """
+    def test_restart_game(self):
+        """Tests restart_game function"""
+        print('Testing restart_game')
+        with mock.patch(
+          'builtins.input', side_effect=iter(['x', 'y', 'n'])):
+            assert run.clear_log() is run.title()
+
 
 
 if __name__ == "__main__":
