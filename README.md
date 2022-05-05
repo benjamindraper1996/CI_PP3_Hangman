@@ -290,3 +290,38 @@ This diagram shows the structure and flow of the game logic within the applicati
 The approach I decided to take to test this project was to manually test the user stories myself and get another individual to follow the same actions, using different credentials when logging in to test the game.
 
 After this I decided to use an automated testing library called unittest to test my validation file. This involves building tests to allow the game to step through and test the functions within the validation file that I have targeted.
+
+### Manual Testing
+This section follows the user story structure and will test each user story against its own scenario.
+
+1. I want clear options to select in all the game menus.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| How To Play | When the game is opened read the instructions how to play the game | User can read and understand how the game and menus should be navigated | Works as expected |
+| Game Options | At each prompt the player can read the instructions given to guide them to the correct goal | User can read and understand how to navigate forward | Works as expected |
+| Email Validation | The user enters a incorrect email address | The game identifies the email is not correct and asks the player to try again before continuing | Works as expected |
+| Welcome Message | When the game is opened, view the welcome message, and read the instructions how to play the game | User can read and understand how the game and menus should be navigated | Works as expected |
+| Input Validation | The user enters a incorrect character at a given prompt | The game identifies the character is invalid and asks the player to try again before continuing | Works as expected |
+| Game | The player enters a valid character into the game | The game either reveals the letter within the word or the player loses a life | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-1-a.jpg">
+<img src="docs/testing/user-story-1-b.jpg">
+<img src="docs/testing/user-story-1-c.jpg">
+<img src="docs/testing/user-story-1-d.jpg">
+<img src="docs/testing/user-story-1-e.jpg">
+<img src="docs/testing/user-story-1-f.jpg">
+</details>
+
+2. I want to be able to read how to play the game.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| How To Play | When the game is opened read the instructions how to play the game | User can read and understand how the game and menus should be navigated | Works as expected |
+| Welcome Message | When the game is opened, view the welcome message and  read the instructions how to play the game | User can read and understand how the game and menus should be navigated | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-2-a.jpg">
+<img src="docs/testing/user-story-2-b.jpg">
+</details>
