@@ -147,6 +147,26 @@ This diagram shows the structure and flow of the game logic within the applicati
 ![User Login](documentation/features/user-login.jpg)
 </details>
 
+<details>
+<summary>Incorrect Login format Screenshot</summary>
+![Incorrect Login](documentation/features/login-incorrect.jpg)
+</details>
+
+### User Sign Up
+- Provides the ability for a user to login or create a new account from their email address.
+- Saves the player to a Google Spreadsheet to be recalled when needed.
+- User stories covered: 3, 4, 11
+
+<details>
+<summary> User Sign Up Screenshot</summary>
+![User Sign Up](documentation/features/user-sign-up.jpg)
+</details>
+
+<details>
+<summary>Player Database Screenshot</summary>
+![Player Database](documentation/features/player-database.jpg)
+</details>
+
 
 
 [Back to Table Of Content](#table-of-content)
