@@ -81,13 +81,13 @@ class TestRestartGame(unittest.TestCase):
     """
     Tests the restart_game function
     """
+
     def test_restart_game(self):
         """Tests restart_game function"""
         print('Testing restart_game')
         with mock.patch(
-          'builtins.input', side_effect=iter(['x', 'y', 'n'])):
+          'builtins.input', side_effect=iter(['x', 'n', 'y'])):
             assert run.clear_log() is run.title()
-
 
 
 if __name__ == "__main__":
