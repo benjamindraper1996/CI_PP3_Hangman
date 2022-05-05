@@ -402,3 +402,34 @@ This section follows the user story structure and will test each user story agai
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-story-8.jpg">
 </details>
+
+9. I want users to have a good experience when they are playing the game.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| How To Play | When the game is opened read the instructions how to play the game | User can read and understand how the game and menus should be navigated | Works as expected |
+| Game Options | At each prompt the player can read the instructions given to guide them to the correct goal | User can read and understand how to navigate forward | Works as expected |
+| Email Validation | On the welcome message screen the player can type in their email address to sign into their account |User signs into their account, the game verifies that the email is correct, to prevent errors signing back in later | Works as expected |
+| Welcome Message | On the welcome message screen the player can read a description of the game and sign into their account |User signs back into their account | Works as expected |
+| Input Validation | The user enters a incorrect character at a given prompt | The game identifies the character is invalid and asks the player to try again before continuing, preventing the user making an error | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-9-a.jpg">
+<img src="docs/testing/user-story-9-b.jpg">
+<img src="docs/testing/user-story-9-c.jpg">
+<img src="docs/testing/user-story-9-d.jpg">
+</details>
+
+10. I want users to be able to easily select options from all menus throughout the game.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| How To Play | When the game is opened read the instructions how to play the game | User can read and understand how the game and menus should be navigated | Works as expected |
+| Game Options | At each prompt the player can read the instructions given to guide them to the correct goal | User can read and understand how to navigate forward | Works as expected |
+| Input Validation | The user enters a incorrect character at a given prompt | The game identifies the character is invalid and asks the player to try again before continuing, preventing the user making an error | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-10-a.jpg">
+<img src="docs/testing/user-story-10-b.jpg">
+<img src="docs/testing/user-story-10-c.jpg">
+</details>
