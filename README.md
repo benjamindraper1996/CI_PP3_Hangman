@@ -391,3 +391,14 @@ This section follows the user story structure and will test each user story agai
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user-story-7.jpg">
 </details>
+
+8. I want to see how many games I've won so far.
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| User Login | On the welcome message screen the player can type in their email address to sign into their account |User signs back into their account and is shown the number of games they have previously won | Works as expected |
+| Game | The player enters the final character into the game | The game either reveals the word and tells the player they have won the game, displaying how many games they have previously won | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/user-story-8.jpg">
+</details>
