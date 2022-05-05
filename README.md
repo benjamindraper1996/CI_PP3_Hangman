@@ -215,6 +215,18 @@ This diagram shows the structure and flow of the game logic within the applicati
 ![ Welcome Message](documentation/features/welcome-message.jpg)
 </details>
 
+### Input Validation
+- Informs the player when they enter an invalid character into a prompt or menu with the game
+- Will not allow the user to progress forwards without a correct input
+- Asks the user to try their input again
+- User stories covered:1, 5, 9, 10, 12, 13
+
+<details>
+<summary> Input Validation Screenshot</summary>
+
+![ Input Validation](documentation/features/input-validation.jpg)
+</details>
+
 
 [Back to Table Of Content](#table-of-content)
 
