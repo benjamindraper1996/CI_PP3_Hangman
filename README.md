@@ -125,6 +125,7 @@ This diagram shows the structure and flow of the game logic within the applicati
 - os is used to allow me to clear the terminal for different types of operating systems.
 - random is used to randomize the word used within the game, I used a selection of predefined words that it can select randomly select from.
 - string is used to ensure that all the characters entered by the player weather they are uppercase, or lowercase are interpreted as a lowercase character to prevent errors.
+- sys is used to exit the game cleanly when the player decides to exit.
 - [unittest](https://docs.python.org/3/library/unittest.html) – used to carry out automated testing on the validation.py file
 
 #### Third Party Libraries

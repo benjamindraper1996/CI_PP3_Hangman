@@ -21,31 +21,34 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('CI_PP3_Hangman')
 WORKSHEET = SHEET.worksheet("Users")
 
+PLAYER_SCORE = int()
+EMAIL = str()
+PLAYER_ROW = int()
+
 
 def login():
     """
     Logs existing players in and creates new accounts.
     """
-
-    global player_score
-    global email
-    global player_row
+    global PLAYER_SCORE
+    global EMAIL
+    global PLAYER_ROW
 
     try:
         while True:
-            email = get_email()
-            existing_user = check_registered(email)
+            EMAIL = get_email()
+            existing_user = check_registered(EMAIL)
 
             if existing_user:
-                player_row = WORKSHEET.find(email).row
-                player_name = WORKSHEET.row_values(player_row)[1]
-                player_score = int(WORKSHEET.row_values(player_row)[2])
+                PLAYER_ROW = WORKSHEET.find(EMAIL).row
+                player_name = WORKSHEET.row_values(PLAYER_ROW)[1]
+                PLAYER_SCORE = int(WORKSHEET.row_values(PLAYER_ROW)[2])
                 print(f'Hello again {player_name}.\n')
-                print(f'Your score is {player_score}.\n')
+                print(f'Your score is {PLAYER_SCORE}.\n')
                 game()
             else:
                 new_name = input('Your a new player, enter email again: \n')
-                player = [email, new_name, 0]
+                player = [EMAIL, new_name, 0]
                 WORKSHEET.append_row(player)
                 game()
     except TypeError:
@@ -57,32 +60,32 @@ def get_email():
     Gets the users email address.
     """
     while True:
-        email = input('Please enter your email address to continue: \n')
-        if valid_email(email):
+        EMAIL = input('Please enter your email address to continue: \n')
+        if valid_email(EMAIL):
             break
-    return email
+    return EMAIL
 
 
-def valid_email(email):
+def valid_email(EMAIL):
     """
     Validates the email given to the format name@example.com.
     """
     print('Validating email address...')
     try:
-        validate_email(email)
+        validate_email(EMAIL)
         return True
     except EmailNotValidError as err:
         print(str(err), 'Email address not valid please try again!\n')
 
 
-def check_registered(email):
+def check_registered(EMAIL):
     """
     Checks if the player is already registered.
     """
     print('Checking registration status...')
     col_email = WORKSHEET.col_values(1)
 
-    if email in col_email:
+    if EMAIL in col_email:
         return True
     else:
         return False

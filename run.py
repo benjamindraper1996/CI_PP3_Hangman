@@ -1,6 +1,7 @@
 """
 Hangman game file.
 """
+import sys
 import os
 import random
 import string
@@ -162,7 +163,7 @@ def restart_game():
         elif end_game == 'n':
             clear_log()
             print('Thanks for playing! To restart, press the button above.')
-            SystemExit()
+            sys.exit()
         else:
             clear_log()
             print('Invalid character, Please try again!\n')
@@ -217,8 +218,8 @@ def game():
     else:
         clear_log()
         title()
-        val.player_score += 1
-        val.WORKSHEET.update_cell(val.player_row, 3, val.player_score)
+        val.PLAYER_SCORE += 1
+        val.WORKSHEET.update_cell(val.PLAYER_ROW, 3, val.PLAYER_SCORE)
         print(f'Well done you managed to guess the word {game_word}!')
         restart_game()
 

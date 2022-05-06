@@ -16,13 +16,11 @@ class TestEmail(unittest.TestCase):
         """Tests for a Valid Email"""
         print('Testing For Valid Email')
         self.assertTrue(val.valid_email('test@gmail.com'), True)
-        print('Test Complete')
 
     def test_invalid_email(self):
         """Tests for a Invalid Email"""
         print('Testing For Invalid Email')
         self.assertFalse(val.valid_email('1234'), None)
-        print('Test Complete')
 
 
 class TestLogin(unittest.TestCase):
@@ -59,14 +57,13 @@ class TestNewLogin(unittest.TestCase):
 
 class TestDisplays(unittest.TestCase):
     """
-    Tests the title, clear_log functions
+    Tests the title, clear_log and welcome_message functions
     """
 
     def test_title(self):
         """Tests the title function"""
         print('Testing title print')
         self.assertFalse(run.title(), True)
-        print('Test complete')
 
     def test_clear_log(self):
         """Tests clear_log function"""
@@ -74,6 +71,10 @@ class TestDisplays(unittest.TestCase):
         with mock.patch(
           'os.system', side_effect=iter(['posix', 'dos', 'err'])):
             self.assertIsNone(run.clear_log(), True)
+
+    # def test_welcome_message(self):
+    #     """Tests welcome_message function"""
+    #     print('Testing welcome_message')
 
 
 class TestRestartGame(unittest.TestCase):
