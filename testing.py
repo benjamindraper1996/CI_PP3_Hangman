@@ -50,9 +50,15 @@ class TestNewLogin(unittest.TestCase):
     def test_new_login(self):
         """Tests the login function to create a new player"""
         print('Testing new player login')
-        with mock.patch(
-          'builtins.input', side_effect=iter(['1234@gmail.com', 'test', ])):
-            assert val.login() is run.title()
+        quit_code.insert(0, 'test')
+        quit_code.insert(0, '1234@gmail.com')
+        with mock.patch('builtins.input', side_effect=iter(quit_code)):
+            with self.assertRaises(SystemExit) as ex:
+                val.login()
+
+            del quit_code[1]
+            del quit_code[0]
+            self.assertEqual(ex.exception.code, 1)
 
     def test_temp_login(self):
         """deletes the email to be reused on the next run"""
