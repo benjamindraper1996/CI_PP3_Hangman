@@ -6,6 +6,8 @@ from unittest import mock
 import validation as val
 import run as run
 
+quit_code = ['b', 'j', 'k', 'q', 'r', 'v', 'w', 'x', 'y', 'z', 'n']
+
 
 class TestEmail(unittest.TestCase):
     """
@@ -31,9 +33,13 @@ class TestLogin(unittest.TestCase):
     def test_login(self):
         """Tests the login function"""
         print('Testing player login')
-        with mock.patch(
-         'builtins.input', side_effect=iter(['test@gmail.com', ])):
-            assert val.login() is run.title()
+        quit_code.insert(0, 'test@gmail.com')
+        with mock.patch('builtins.input', side_effect=iter(quit_code)):
+            with self.assertRaises(SystemExit) as ex:
+                val.login()
+
+            del quit_code[0]
+            self.assertEqual(ex.exception.code, 1)
 
 
 class TestNewLogin(unittest.TestCase):
