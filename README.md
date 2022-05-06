@@ -514,15 +514,15 @@ This application has been deployed from GitHub to Heroku by following the steps:
 ## Credits
 
 ### Images
-- [Flaticon]() was used for the website favicon
-- [Flaticon]() was used for the GitHub icon
-- [Flaticon]() was used for the LinkedIn icon
+- [Flaticon](https://www.flaticon.com/premium-icon/hangman_514163?term=hangman&page=1&position=2&page=1&position=2&related_id=514163&origin=search) was used for the website favicon.
+- [FontAwesome](https://fontawesome.com/) was used for the GitHub icon.
+- [FontAwesome](https://fontawesome.com/) was used for the LinkedIn icon.
 
 ### Code
 - Code Institute’s git template IDE and "Love Sandwiches - Essentials Project" which helped me connect the Google Spreadsheet to my project.
 - [Pypi](https://pypi.org) was used for a number of python modules and libraries and how to install them.
 - [gspread docs](https://docs.gspread.org/en/latest/user-guide.html) explained how to obtain values, rows and create new data.
-- [Aleksandra Haniok’s Connect 4]() for introducing me to unittests and enabling me to grasp the concept.
+- [Aleksandra Haniok’s Connect 4](https://github.com/aleksandracodes/CI_PP3_Connect4) for introducing me to unittests and enabling me to grasp the concept.
 
 [Back to Table Of Content](#table-of-content)
 
