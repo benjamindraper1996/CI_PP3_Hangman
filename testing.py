@@ -68,8 +68,9 @@ class TestDisplays(unittest.TestCase):
     def test_clear_log(self):
         """Tests clear_log function"""
         print('Testing clear_log')
+        os_list = ['dos', 'posix', 'err']
         with mock.patch(
-          'os.system', side_effect=iter(['posix', 'dos', 'err'])):
+          'os.name', side_effect=iter(os_list)):
             self.assertIsNone(run.clear_log(), True)
 
     # def test_welcome_message(self):
