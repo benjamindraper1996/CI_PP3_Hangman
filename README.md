@@ -237,7 +237,7 @@ This diagram shows the structure and flow of the game logic within the applicati
 - Displays a warning when an invalid character is entered.
 - Tells the player when the enter a letter that is not in the word.
 - Provides feedback when the game has been won.
-- Gives the option to play again and prints the users total score after the game is finished.
+- Gives the option to play again and prints the users total when the next game starts.
 - User stories covered: 1, 5, 6, 7, 8, 12, 13
 
 <details>
@@ -248,19 +248,13 @@ This diagram shows the structure and flow of the game logic within the applicati
 <details>
 <summary>Invalid Character Screenshot</summary>
 
-![Invalid Character](documentation/features/invalid-character.jpg)
+![Invalid Character](documentation/features/input-validation.jpg)
 </details>
 <details>
-<summary>Game Won Screenshot</summary>
+<summary>Game Won/Next Game Screenshot</summary>
 
 ![Game Won](documentation/features/game-won.jpg)
 </details>
-<details>
-<summary>Next Game Screenshot</summary>
-
-![Next Game](documentation/features/next-game.jpg)
-</details>
-
 
 [Back to Table Of Content](#table-of-content)
 
@@ -307,12 +301,12 @@ This section follows the user story structure and will test each user story agai
 | Game | The player enters a valid character into the game | The game either reveals the letter within the word or the player loses a life | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-1-a.jpg">
-<img src="docs/testing/user-story-1-b.jpg">
-<img src="docs/testing/user-story-1-c.jpg">
-<img src="docs/testing/user-story-1-d.jpg">
-<img src="docs/testing/user-story-1-e.jpg">
-<img src="docs/testing/user-story-1-f.jpg">
+<img src="documentation/testing/user-story-1-a.jpg">
+<img src="documentation/testing/user-story-1-b.jpg">
+<img src="documentation/testing/user-story-1-c.jpg">
+<img src="documentation/testing/user-story-1-d.jpg">
+<img src="documentation/testing/user-story-1-e.jpg">
+<img src="documentation/testing/user-story-1-f.jpg">
 </details>
 
 2. I want to be able to read how to play the game.
@@ -323,8 +317,8 @@ This section follows the user story structure and will test each user story agai
 | Welcome Message | When the game is opened, view the welcome message and  read the instructions how to play the game | User can read and understand how the game and menus should be navigated | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-2-a.jpg">
-<img src="docs/testing/user-story-2-b.jpg">
+<img src="documentation/testing/user-story-2-a.jpg">
+<img src="documentation/testing/user-story-2-b.jpg">
 </details>
 
 3. I want to be able to log in to my account.
@@ -337,10 +331,10 @@ This section follows the user story structure and will test each user story agai
 | Welcome Message | On the welcome message screen the player can type in their email address to sign into their account |User signs into their account | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-3-a.jpg">
-<img src="docs/testing/user-story-3-b.jpg">
-<img src="docs/testing/user-story-3-c.jpg">
-<img src="docs/testing/user-story-3-d.jpg">
+<img src="documentation/testing/user-story-3-a.jpg">
+<img src="documentation/testing/user-story-3-b.jpg">
+<img src="documentation/testing/user-story-3-c.jpg">
+<img src="documentation/testing/user-story-3-d.jpg">
 </details>
 
 4. I want to be to log back into my account when I return to the game.
@@ -352,9 +346,9 @@ This section follows the user story structure and will test each user story agai
 | Welcome Message | On the welcome message screen the player can type in their email address to sign into their account |User signs back into their account | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-4-a.jpg">
-<img src="docs/testing/user-story-4-b.jpg">
-<img src="docs/testing/user-story-4-c.jpg">
+<img src="documentation/testing/user-story-4-a.jpg">
+<img src="documentation/testing/user-story-4-b.jpg">
+<img src="documentation/testing/user-story-4-c.jpg">
 </details>
 
 5. I want to receive feedback throughout the game.
@@ -367,10 +361,10 @@ This section follows the user story structure and will test each user story agai
 | Game | The player enters a valid character into the game | The game either reveals the letter within the word or the player loses a life | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-5-a.jpg">
-<img src="docs/testing/user-story-5-b.jpg">
-<img src="docs/testing/user-story-5-c.jpg">
-<img src="docs/testing/user-story-5-d.jpg">
+<img src="documentation/testing/user-story-5-a.jpg">
+<img src="documentation/testing/user-story-5-b.jpg">
+<img src="documentation/testing/user-story-5-c.jpg">
+<img src="documentation/testing/user-story-5-d.jpg">
 </details>
 
 6. I want to get feedback when I win the game.
@@ -380,7 +374,7 @@ This section follows the user story structure and will test each user story agai
 | Game | The player enters the final character into the game | The game either reveals the word and tells the player they have won the game | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-6.jpg">
+<img src="documentation/testing/user-story-6.jpg">
 </details>
 
 7. I want to be able to play multiple games when I'm logged in.
@@ -390,7 +384,7 @@ This section follows the user story structure and will test each user story agai
 | Game | The player enters the final character into the game | The game either reveals the word and tells the player they have won the game, displaying a prompt asking if they would like to play again | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-7.jpg">
+<img src="documentation/testing/user-story-7.jpg">
 </details>
 
 8. I want to see how many games I've won so far.
@@ -401,7 +395,7 @@ This section follows the user story structure and will test each user story agai
 | Game | The player enters the final character into the game | The game either reveals the word and tells the player they have won the game, displaying how many games they have previously won | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-8.jpg">
+<img src="documentation/testing/user-story-8.jpg">
 </details>
 
 9. I want users to have a good experience when they are playing the game.
@@ -415,10 +409,10 @@ This section follows the user story structure and will test each user story agai
 | Input Validation | The user enters a incorrect character at a given prompt | The game identifies the character is invalid and asks the player to try again before continuing, preventing the user making an error | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-9-a.jpg">
-<img src="docs/testing/user-story-9-b.jpg">
-<img src="docs/testing/user-story-9-c.jpg">
-<img src="docs/testing/user-story-9-d.jpg">
+<img src="documentation/testing/user-story-9-a.jpg">
+<img src="documentation/testing/user-story-9-b.jpg">
+<img src="documentation/testing/user-story-9-c.jpg">
+<img src="documentation/testing/user-story-9-d.jpg">
 </details>
 
 10. I want users to be able to easily select options from all menus throughout the game.
@@ -430,9 +424,9 @@ This section follows the user story structure and will test each user story agai
 | Input Validation | The user enters a incorrect character at a given prompt | The game identifies the character is invalid and asks the player to try again before continuing, preventing the user making an error | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-10-a.jpg">
-<img src="docs/testing/user-story-10-b.jpg">
-<img src="docs/testing/user-story-10-c.jpg">
+<img src="documentation/testing/user-story-10-a.jpg">
+<img src="documentation/testing/user-story-10-b.jpg">
+<img src="documentation/testing/user-story-10-c.jpg">
 </details>
 
 11. I want all emails, usernames, and scores to be saved in a Google spreadsheet.
@@ -442,7 +436,7 @@ This section follows the user story structure and will test each user story agai
 | User Sign Up | On the welcome message screen the player can type in their email address and name to sign up for a new account |User signs up for a new account and user email, name and a blank score is store in the Google sheet | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-11-a.jpg">
+<img src="documentation/testing/user-story-11-a.jpg">
 </details>
 
 12. I want the user to see feedback from the game when they enter the wrong letter in the game.
@@ -453,8 +447,8 @@ This section follows the user story structure and will test each user story agai
 | Game | The user enters an already used character at a given prompt | The game identifies the character is valid and asks tells player the letter already used before asking to try again | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-12-a.jpg">
-<img src="docs/testing/user-story-12-b.jpg">
+<img src="documentation/testing/user-story-12-a.jpg">
+<img src="documentation/testing/user-story-12-b.jpg">
 </details>
 
 13. I want the user to receive feedback from the game when they enter an invalid answer.
@@ -467,10 +461,10 @@ This section follows the user story structure and will test each user story agai
 | Game | The user enters a valid character at a given prompt | The game identifies the character is valid and asks tells player the letter is not in the word before losing a life and asking to try again | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="docs/testing/user-story-13-a.jpg">
-<img src="docs/testing/user-story-13-b.jpg">
-<img src="docs/testing/user-story-13-c.jpg">
-<img src="docs/testing/user-story-13-d.jpg">
+<img src="documentation/testing/user-story-13-a.jpg">
+<img src="documentation/testing/user-story-13-b.jpg">
+<img src="documentation/testing/user-story-13-c.jpg">
+<img src="documentation/testing/user-story-13-d.jpg">
 </details>
 
 [Back to Table Of Content](#table-of-content)
