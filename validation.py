@@ -24,6 +24,7 @@ WORKSHEET = SHEET.worksheet("Users")
 PLAYER_SCORE = int()
 EMAIL = str()
 PLAYER_ROW = int()
+PLAYER_NAME = str()
 
 
 def login():
@@ -33,6 +34,7 @@ def login():
     global PLAYER_SCORE
     global EMAIL
     global PLAYER_ROW
+    global PLAYER_NAME
 
     try:
         while True:
@@ -41,10 +43,8 @@ def login():
 
             if existing_user:
                 PLAYER_ROW = WORKSHEET.find(EMAIL).row
-                player_name = WORKSHEET.row_values(PLAYER_ROW)[1]
+                PLAYER_NAME = WORKSHEET.row_values(PLAYER_ROW)[1]
                 PLAYER_SCORE = int(WORKSHEET.row_values(PLAYER_ROW)[2])
-                print(f'Hello again {player_name}.\n')
-                print(f'Your score is {PLAYER_SCORE}.\n')
                 game()
             else:
                 new_name = input('Your a new player, enter your name: \n')

@@ -175,7 +175,7 @@ This diagram shows the structure and flow of the game logic within the applicati
 ### How To Play
 - Explains to the user how to play the game and navigate through the menus.
 - Is displayed before the user must interact with any menu or the main game.
-- User stories covered: 1, 2, 9,10
+- User stories covered: 1, 2, 9, 10
 
 <details>
 <summary>How To Play Screenshot</summary>

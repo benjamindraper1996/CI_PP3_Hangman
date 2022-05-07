@@ -135,7 +135,7 @@ def pick_word(lib):
     return word
 
 
-def clear_log(lines=80):
+def clear_log(lines=100):
     """
     Clears the console screen.
     lines variable used as the fallback option when the OS is unknown.
@@ -180,6 +180,8 @@ def game():
     lives_left = 10
 
     title()
+    print(f'Hello {val.PLAYER_NAME}.\n')
+    print(f'Your score is {val.PLAYER_SCORE}.\n')
 
     while len(letters) > 0 and lives_left > 0:
         print(f'Lives remaining: {lives_left}')
