@@ -180,8 +180,8 @@ def game():
     lives_left = 10
 
     title()
-    print(f'Hello {val.PLAYER_NAME}.\n')
-    print(f'Your score is {val.PLAYER_SCORE}.\n')
+    print(f'Hello {val.PLAYER_NAME}.')
+    print(f'Your score is {val.PLAYER_SCORE}.')
 
     while len(letters) > 0 and lives_left > 0:
         print(f'Lives remaining: {lives_left}')
