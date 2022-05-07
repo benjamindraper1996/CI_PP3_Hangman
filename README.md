@@ -213,7 +213,7 @@ This diagram shows the structure and flow of the game logic within the applicati
 <details>
 <summary> Welcome Message Screenshot</summary>
 
-![ Welcome Message](documentation/features/welcome-message.jpg)
+![ Welcome Message](documentation/features/user-login.jpg)
 </details>
 
 ### Input Validation
