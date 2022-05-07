@@ -47,7 +47,7 @@ def login():
                 print(f'Your score is {PLAYER_SCORE}.\n')
                 game()
             else:
-                new_name = input('Your a new player, enter email again: \n')
+                new_name = input('Your a new player, enter your name: \n')
                 player = [EMAIL, new_name, 0]
                 WORKSHEET.append_row(player)
                 game()
