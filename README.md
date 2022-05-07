@@ -469,6 +469,15 @@ This section follows the user story structure and will test each user story agai
 
 ## Bugs
 
+| **Bug** | **Fix** |
+| ------- | ------- |
+| Game incorrectly listing the lettersthe player has already used within the game due to incorrect usage of the '.join' function | Splitting the f'string' into two pieces and using the '.join' on the second part |
+| Game not recognising 'y' or 'n' characters to restart the game upon either winning or losing | Missed a pair of open and closing brackets on line 82 for the '.lower' causing an error |
+| When the player runs out of ives the game did not end and the player has minus number of lives | changed the 'While' loop to add an extra 'AND' statement to stop game on both the letters in the word and the number of lives |
+| When the game has been won the next game automatically started and the prompt asking the user weather they wanted to continue was skipped | Add new function to separate the code to restart the game, asking the user weather they want to restart or quit |
+| Game not displaying gallows dictionary when the game has been lost by the player | Add a print statement checking if the lives are eqaul to 0 to print the full gallows picture |
+| Game looping round within itself, redirected towards welcome message when asked to quit instead of closing | Changed function call to close the game gracefully |
+
 [Back to Table Of Content](#table-of-content)
 
 ## Deployment
