@@ -6,7 +6,7 @@ from unittest import mock
 import validation as val
 import run as run
 
-quit_code = ['b', 'j', 'k', 'q', 'r', 'v', 'w', 'x', 'y', 'z', 'n']
+quit_code = ['b', '£', 'j', 'k', 'q', 'r', 'v', 'w', 'x', 'y', 'z', 'n']
 
 
 class TestEmail(unittest.TestCase):
@@ -85,9 +85,16 @@ class TestDisplays(unittest.TestCase):
           'os.name', side_effect=iter(os_list)):
             self.assertIsNone(run.clear_log(), True)
 
-    # def test_welcome_message(self):
-    #     """Tests welcome_message function"""
-    #     print('Testing welcome_message')
+    def test_welcome_message(self):
+        """Tests welcome_message function"""
+        print('Testing welcome_message')
+        quit_code.insert(0, 'test@gmail.com')
+        with mock.patch('builtins.input', side_effect=iter(quit_code)):
+            with self.assertRaises(SystemExit) as ex:
+                run.welcome_message()
+
+            del quit_code[0]
+            self.assertEqual(ex.exception.code, 1)
 
 
 class TestRestartGame(unittest.TestCase):
