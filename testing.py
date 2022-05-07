@@ -56,7 +56,7 @@ class TestNewLogin(unittest.TestCase):
             with self.assertRaises(SystemExit) as ex:
                 val.login()
 
-            del quit_code[1]
+            del quit_code[0]
             del quit_code[0]
             self.assertEqual(ex.exception.code, 1)
 
@@ -98,9 +98,17 @@ class TestRestartGame(unittest.TestCase):
     def test_restart_game(self):
         """Tests restart_game function"""
         print('Testing restart_game')
-        text = ['x', 'y', 'n']
-        with mock.patch('builtins.input', side_effect=iter(text)):
-            assert run.restart_game() is run.title()
+        quit_code.insert(0, 'n')
+        quit_code.insert(0, 'y')
+        quit_code.insert(0, 'x')
+        with mock.patch('builtins.input', side_effect=iter(quit_code)):
+            with self.assertRaises(SystemExit) as ex:
+                run.restart_game()
+
+            del quit_code[0]
+            del quit_code[0]
+            del quit_code[0]
+            self.assertEqual(ex.exception.code, 1)
 
 
 if __name__ == "__main__":
