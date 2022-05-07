@@ -75,7 +75,8 @@ def valid_email(EMAIL):
         validate_email(EMAIL)
         return True
     except EmailNotValidError as err:
-        print(str(err), 'Email address not valid please try again!\n')
+        print(str(err))
+        print('Email address not valid please try again!')
 
 
 def check_registered(EMAIL):

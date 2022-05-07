@@ -196,16 +196,16 @@ def game():
                 letters.remove(user_choice)
                 clear_log()
                 title()
-                print(f'{user_choice} is a correct letter!\n')
+                print(f'{user_choice} is a correct letter!')
             else:
                 lives_left -= 1
                 clear_log()
                 title()
-                print(f'{user_choice} is not part of the word.\n')
+                print(f'{user_choice} is not part of the word.')
         elif user_choice in attempts:
             clear_log()
             title()
-            print(f'{user_choice} has been used, Please try again!\n')
+            print(f'{user_choice} has been used, Please try again!')
         else:
             clear_log()
             title()
