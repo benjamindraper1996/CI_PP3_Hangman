@@ -10,8 +10,8 @@ import validation as val
 # List of words for use inside the game.
 LIBRARY = ["computer", "approach", "daughter", "innocent", "dedicate",
            "solution", "sentence", "magnetic", "delicate", "producer",
-           "definite", "complete", "terminal", "finished", "absolute",
-           "scenario", "argument", "champion", "nominate", "function"]
+           "indirect", "complete", "terminal", "standard", "designer",
+           "scenario", "argument", "champion", "nominate", "merchant"]
 
 gallows_dict = {
     0: """
@@ -155,18 +155,22 @@ def restart_game():
     """
     Reloads the game when it has been won or lost.
     """
-    while True:
-        end_game = input('Would you like to play again? y/n\n').lower()
-        if end_game == 'y':
-            clear_log()
-            game()
-        elif end_game == 'n':
-            clear_log()
-            print('Thanks for playing! To restart, press the button above.')
-            sys.exit(1)
-        else:
-            clear_log()
-            print('Invalid character, Please try again!\n')
+    try:
+        while True:
+            end_game = input('Would you like to play again? y/n\n').lower()
+            if end_game == 'y':
+                clear_log()
+                game()
+            elif end_game == 'n':
+                clear_log()
+                print(
+                    'Thanks for playing! To restart, press the button above.')
+                sys.exit(1)
+            else:
+                clear_log()
+                print('Invalid character, Please try again!\n')
+    except TypeError:
+        return None
 
 
 def game():
@@ -183,47 +187,51 @@ def game():
     print(f'Hello {val.PLAYER_NAME}.')
     print(f'Your score is {val.PLAYER_SCORE}.')
 
-    while len(letters) > 0 and lives_left > 0:
-        print(f'Lives remaining: {lives_left}')
-        print('These are the letters you have used: ', ' '.join(attempts))
-        guess = [letter if letter in attempts else '_' for letter in game_word]
-        print(gallows_dict[lives_left])
-        print(' '.join(guess))
-        user_choice = input('Try and guess a letter:\n').lower()
-        if user_choice in alphabet - attempts:
-            attempts.add(user_choice)
-            if user_choice in letters:
-                letters.remove(user_choice)
+    try:
+        while len(letters) > 0 and lives_left > 0:
+            print(f'Lives remaining: {lives_left}')
+            print('These are the letters you have used: ', ' '.join(attempts))
+            guess = [
+                letter if letter in attempts else '_' for letter in game_word]
+            print(gallows_dict[lives_left])
+            print(' '.join(guess))
+            user_choice = input('Try and guess a letter:\n').lower()
+            if user_choice in alphabet - attempts:
+                attempts.add(user_choice)
+                if user_choice in letters:
+                    letters.remove(user_choice)
+                    clear_log()
+                    title()
+                    print(f'{user_choice} is a correct letter!')
+                else:
+                    lives_left -= 1
+                    clear_log()
+                    title()
+                    print(f'{user_choice} is not part of the word.')
+            elif user_choice in attempts:
                 clear_log()
                 title()
-                print(f'{user_choice} is a correct letter!')
+                print(f'{user_choice} has been used, Please try again!')
             else:
-                lives_left -= 1
                 clear_log()
                 title()
-                print(f'{user_choice} is not part of the word.')
-        elif user_choice in attempts:
+                print('Invalid character, Please try again!\n')
+
+        if lives_left == 0:
             clear_log()
             title()
-            print(f'{user_choice} has been used, Please try again!')
+            print(gallows_dict[lives_left])
+            print(f'You have runout of lives! The word was {game_word}.')
+            restart_game()
         else:
             clear_log()
             title()
-            print('Invalid character, Please try again!\n')
-
-    if lives_left == 0:
-        clear_log()
-        title()
-        print(gallows_dict[lives_left])
-        print(f'You have runout of lives! The word was {game_word}.')
-        restart_game()
-    else:
-        clear_log()
-        title()
-        val.PLAYER_SCORE += 1
-        val.WORKSHEET.update_cell(val.PLAYER_ROW, 3, val.PLAYER_SCORE)
-        print(f'Well done you managed to guess the word {game_word}!')
-        restart_game()
+            val.PLAYER_SCORE += 1
+            val.WORKSHEET.update_cell(val.PLAYER_ROW, 3, val.PLAYER_SCORE)
+            print(f'Well done you managed to guess the word {game_word}!')
+            restart_game()
+    except TypeError:
+        return None
 
 
 def title():

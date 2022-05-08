@@ -6,7 +6,7 @@ from unittest import mock
 import validation as val
 import run as run
 
-quit_code = ['b', '£', 'j', 'k', 'q', 'r', 'v', 'w', 'x', 'y', 'z', 'n']
+quit_code = ['b', '£', 'j', 'k', 'q', 'f', 'v', 'w', 'x', 'y', 'z', 'n']
 
 
 class TestEmail(unittest.TestCase):
