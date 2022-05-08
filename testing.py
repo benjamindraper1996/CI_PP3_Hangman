@@ -6,7 +6,8 @@ from unittest import mock
 import validation as val
 import run as run
 
-quit_code = ['b', '£', 'j', 'k', 'q', 'f', 'v', 'w', 'x', 'y', 'z', 'n']
+quit_code = [
+    'e', 'b', 'b', '£', 'j', 'k', 'q', 'f', 'v', 'w', 'x', 'y', 'z', 'n']
 
 
 class TestEmail(unittest.TestCase):
@@ -80,7 +81,7 @@ class TestDisplays(unittest.TestCase):
     def test_clear_log(self):
         """Tests clear_log function"""
         print('Testing clear_log')
-        os_list = ['dos', 'posix', 'err']
+        os_list = ['posix', 'dos', 'err']
         with mock.patch(
           'os.name', side_effect=iter(os_list)):
             self.assertIsNone(run.clear_log(), True)

@@ -36,23 +36,20 @@ def login():
     global PLAYER_ROW
     global PLAYER_NAME
 
-    try:
-        while True:
-            EMAIL = get_email()
-            existing_user = check_registered(EMAIL)
+    while True:
+        EMAIL = get_email()
+        existing_user = check_registered(EMAIL)
 
-            if existing_user:
-                PLAYER_ROW = WORKSHEET.find(EMAIL).row
-                PLAYER_NAME = WORKSHEET.row_values(PLAYER_ROW)[1]
-                PLAYER_SCORE = int(WORKSHEET.row_values(PLAYER_ROW)[2])
-                game()
-            else:
-                new_name = input('Your a new player, enter your name: \n')
-                player = [EMAIL, new_name, 0]
-                WORKSHEET.append_row(player)
-                game()
-    except TypeError:
-        return None
+        if existing_user:
+            PLAYER_ROW = WORKSHEET.find(EMAIL).row
+            PLAYER_NAME = WORKSHEET.row_values(PLAYER_ROW)[1]
+            PLAYER_SCORE = int(WORKSHEET.row_values(PLAYER_ROW)[2])
+            game()
+        else:
+            new_name = input('Your a new player, enter your name: \n')
+            player = [EMAIL, new_name, 0]
+            WORKSHEET.append_row(player)
+            game()
 
 
 def get_email():
