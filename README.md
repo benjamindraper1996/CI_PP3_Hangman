@@ -41,8 +41,8 @@ This is a command-line version of the game Hangman, the objective of the game is
 7. [Validation](#validation)
 8. [Testing](#testing)
     1. [Manual Testing](#manual-testing)
-    2. [Automated-testing](#automated-testing)
-9. [Bugs](#Bugs)
+    2. [Automated testing](#automated-testing)
+9. [Bugs](#bugs)
 10. [Deployment](#deployment)
 11. [Credits](#credits)
 12. [Acknowledgements](#acknowledgements)
@@ -469,6 +469,38 @@ This section follows the user story structure and will test each user story agai
 <img src="documentation/testing/user-story-1-e.jpg">
 </details>
 
+### Automated Testing
+
+To perform automated testing I Python's unittest library to write 9 seperate functions to verify the correct operation of the game. Through the use of coverage library was able to easilly view and achieve 93% total coverage of my code with no errors.
+
+My tests were groups together in classes that tested similar functions together.
+
+<details><summary>Screenshot</summary>
+<img src="documentation/testing/unittest-results.jpg">
+<img src="documentation/testing/unittest-report.jpg">
+</details>
+
+The 'TestEmail' class has two functions inside, these set to individually test the email validation upon logging in or signing up for an account to make sure the code can check if the email is both correct and respond appropiately or if incorrectly also take appropiate action.
+
+<details><summary>Screenshot</summary>
+<img src="documentation/testing/unittest-class-testemail.jpg">
+<img src="documentation/testing/unittest-testemail.jpg">
+</details>
+
+The 'TestLogin' class has one function to test the normal login of an already registered user, it does this by calling the function and using a test user that is stored in the Google sheet with the rest of the users. Due to the nature of the game if allowed to continue it would follow through in to the main game so I re-arranged my words allowing me to add a "quit code" into my game for testing purposes this allows the test to reach the end game as fast as possible while testing small amounts of side code along the way.
+
+<details><summary>Screenshot</summary>
+<img src="documentation/testing/unittest-class-testlogin.jpg">
+<img src="documentation/testing/unittest-testlogin.jpg">
+</details>
+
+The 'TestNewLogin' class performs a similar task to 'TestLogin' however it makes sure the code to sign up a new player by using two functions. One function is to register the player, inputting the email and name then emailing the quit code to close the game and the second is to remove teh user from teh spreasheet for subsequent runs of the test.
+
+<details><summary>Screenshot</summary>
+<img src="documentation/testing/unittest-class-testnewlogin.jpg">
+<img src="documentation/testing/unittest-testnewlogin.jpg">
+</details>
+
 [Back to Table Of Content](#table-of-content)
 
 ## Bugs
@@ -477,7 +509,7 @@ This section follows the user story structure and will test each user story agai
 | ------- | ------- |
 | Game incorrectly listing the lettersthe player has already used within the game due to incorrect usage of the '.join' function | Splitting the f'string' into two pieces and using the '.join' on the second part |
 | Game not recognising 'y' or 'n' characters to restart the game upon either winning or losing | Missed a pair of open and closing brackets on line 82 for the '.lower' causing an error |
-| When the player runs out of ives the game did not end and the player has minus number of lives | changed the 'While' loop to add an extra 'AND' statement to stop game on both the letters in the word and the number of lives |
+| When the player runs out of lives the game did not end and the player has minus number of lives | changed the 'While' loop to add an extra 'AND' statement to stop game on both the letters in the word and the number of lives |
 | When the game has been won the next game automatically started and the prompt asking the user weather they wanted to continue was skipped | Add new function to separate the code to restart the game, asking the user weather they want to restart or quit |
 | Game not displaying gallows dictionary when the game has been lost by the player | Add a print statement checking if the lives are eqaul to 0 to print the full gallows picture |
 | Game looping round within itself, redirected towards welcome message when asked to quit instead of closing | Changed function call to close the game gracefully |
