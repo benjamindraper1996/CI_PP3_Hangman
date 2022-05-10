@@ -501,6 +501,20 @@ The 'TestNewLogin' class performs a similar task to 'TestLogin' however it makes
 <img src="documentation/testing/unittest-testnewlogin.jpg">
 </details>
 
+The 'TestDisplays' class has 3 functions to test the main elements of the user interface. This class will test the re-printing of the title art each time it is called to make sure it is shown to the user to maintain a pleasing look. It will also check to make sure the ‘clear_log’ function is working correctly so that the user does not have a very cluttered and confusing screen when they are playing the game. Lastly this function will check to make sure the welcome message has been displayed correctly and as this will ask the player to then sign in it immediately calls on the quit code again.
+
+<details><summary>Screenshot</summary>
+<img src="documentation/testing/unittest-class-testdisplays.jpg">
+<img src="documentation/testing/unittest-testdisplays.jpg">
+</details>
+
+The ‘TestRestartGame’ class has only one function to test the ability to restart the game at the prompt given when the player wither wins or loses, this function tests all three scenarios where the user could enter invalid input, “y” to restart in which case the quit code is used to bring the game back round to then test the final case “n” at which point the game exits and the test is expected to end.
+
+<details><summary>Screenshot</summary>
+<img src="documentation/testing/unittest-class-testrestartgame.jpg">
+<img src="documentation/testing/unittest-testrestartgame.jpg">
+</details>
+
 [Back to Table Of Content](#table-of-content)
 
 ## Bugs
